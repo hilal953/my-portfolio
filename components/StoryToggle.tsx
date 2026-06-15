@@ -2,39 +2,59 @@
 
 import { useState } from "react";
 
-const storyText = `Since around 2010, I started showing a deep interest in studies. For me, learning felt like a form of play. I chose Biology for my Advanced Level in 2017 with the dream of entering medical faculty, but I could not achieve that path.
+const storyText = `Since around 2010, I began to develop a deep interest in studies. Learning never felt like a burden to me. It felt more like play. I was curious, excited, and naturally drawn toward understanding things.
 
-At that time, I realized that school education had given me a foundation of knowledge, but I also felt something deeper inside me. I wanted to build something of my own. So from 2017, I started exploring life by trusting my intuition.
+In 2017, I chose Biology for my Advanced Level studies with one clear dream: to enter medical faculty. But life did not go the way I expected. I could not achieve that path.
 
-Movies played a big role in my journey. The Shawshank Redemption changed my life and gave me the fuel to keep going. Later, because I could not enter medical faculty, I chose Computer Science and started studying it in 2020.
+That failure forced me to look at myself more honestly. School had given me a foundation of knowledge, but I started feeling that there was something deeper inside me. I did not just want to follow a fixed path. I wanted to build something of my own.
 
-Even though I failed many subjects and struggled in university, I kept exploring. Some people misunderstood me and judged me, but I was trying to connect the dots in my own way. I watched inspirational movies, kept learning, and slowly my entrepreneurial spirit started to grow.
+So from 2017 onward, I started exploring life by trusting my intuition.
 
-During that time, I also met the love of my life by accident. Even though I was not great at university, I somehow survived and graduated.
+Movies became a big part of that journey. The Shawshank Redemption changed something in me. It gave me fuel, hope, and the feeling that even when life feels difficult, a person can still keep moving forward.
 
-Then I read Crush It by Gary Vaynerchuk, and it gave me the confidence to start posting online. I posted on LinkedIn and Twitter, even though nothing really worked at first. Instead of only looking for jobs and optimizing my resume, I started thinking more about building something for myself.
+Later, because I could not enter medical faculty, I chose Computer Science and started studying it in 2020. But university was not easy for me. I failed many subjects. I struggled. Some people misunderstood me and judged me. From the outside, maybe it looked like I was lost.
 
-Reading The Almanack of Naval Ravikant completely changed my life. I also read Think and Grow Rich by Napoleon Hill. Even when I was financially tight, I somehow survived, and that gave me real skin in the game.
+But inside, I was trying to connect the dots in my own way.
 
-Later, I found Matt Gray, and that was when I felt strongly that I wanted to build a digital product and achieve my freedom. I also discovered many inspiring people on Twitter, including Sahil Lavingia, Marc Lou, Jack Friks, Haseeb Qureshi, Suhail, and David Senra.
+I kept watching inspirational movies. I kept learning. I kept exploring ideas. Slowly, my entrepreneurial spirit started to grow. Around that time, I also met the love of my life by accident. Even though I was not great at university, I somehow survived, pushed through, and graduated.
 
-I read The Anthology of Balaji, watched movies like Moneyball, The Big Short, and Gladiator, and read The Minimalist Entrepreneur by Sahil Lavingia. The Big Short especially changed the way I looked at many things.
+Then I read Crush It by Gary Vaynerchuk. That book gave me the confidence to start posting online. I began posting on LinkedIn and Twitter, even though nothing really worked at first. While many people were focused only on finding jobs and optimizing their resumes, I started thinking differently.
 
-I also started reading and watching classics like Dune and The Lord of the Rings. I kept posting on Twitter, even though almost nothing worked. But deep inside, I started feeling that being an indie hacker was my calling in life.
+I started thinking about building something for myself.
 
-Then I discovered David Deutsch and read The Beginning of Infinity. That book completely changed my thinking. Nassim Taleb's books also influenced me deeply. Through Twitter doom-scrolling, I found more good people to follow and learn from.
+Reading The Almanack of Naval Ravikant completely changed my life. Think and Grow Rich by Napoleon Hill also influenced me deeply. Even when I was financially tight, I somehow survived. That struggle gave me real skin in the game. It made the journey feel personal, serious, and real.
 
-I especially love David Senra's podcast because when I listen to it, I feel like I am reading parts of myself.
+Later, I found Matt Gray. That was a turning point. For the first time, I strongly felt that I wanted to build a digital product and create my own freedom. Through Twitter, I discovered more people who inspired me: Sahil Lavingia, Marc Lou, Jack Friks, Haseeb Qureshi, Suhail, David Senra, and many others.
 
-That is where I am today. I am still surviving, still managing money carefully, almost like treating money as oxygen. I do not think about breathing every second, but I still breathe. That is how I see money right now.
+I read The Anthology of Balaji. I watched movies like Moneyball, The Big Short, and Gladiator. I read The Minimalist Entrepreneur by Sahil Lavingia. The Big Short especially changed the way I looked at the world. It taught me that sometimes the truth is hidden in plain sight, and only the people who think differently are able to see it.
 
-My belief is that somehow, my thinking, taste, and curiosity will lead me to build a good product. I believe it will create value, get paid, and become successful.
+I also started reading and watching classics like Dune and The Lord of the Rings. I kept posting on Twitter, even though almost nothing worked. But deep inside, I started feeling that being an indie hacker was not just an interest.
 
-I am optimistic. Maybe even irrationally optimistic. Reading The Elon Book by Eric Jorgenson and rereading The Beginning of Infinity by David Deutsch has transformed the way I see life.
+It felt like my calling.
 
-Even though I am still struggling, I feel like I am moving toward something big. I feel like I can build something meaningful, become successful, and maybe even become the next version of someone like Elon.
+Then I discovered David Deutsch and read The Beginning of Infinity. That book completely changed the way I think. Nassim Taleb’s books also influenced me deeply. Through endless Twitter doom-scrolling, I somehow found more good people, better ideas, and new ways of seeing life.
 
-That is my story: still struggling, still exploring, still building, and still believing.`;
+I especially love David Senra’s podcast because when I listen to it, I feel like I am hearing parts of myself. The stories of founders, builders, and obsessive people make me feel less alone. They remind me that maybe I am not lost. Maybe I am just still in the process of becoming.
+
+And that is where I am today.
+
+I am still surviving. I am still managing money carefully, almost like treating money as oxygen. I do not think about breathing every second, but I still breathe. That is how I see money right now. It is always there in the background. It matters deeply, but I do not want it to become the whole story.
+
+My belief is that somehow, my thinking, taste, curiosity, and persistence will lead me to build a good product. I believe I can create something valuable, get paid for it, and make it successful.
+
+I am optimistic. Maybe even irrationally optimistic.
+
+Reading The Elon Book by Eric Jorgenson and rereading The Beginning of Infinity by David Deutsch transformed the way I see life. Even though I am still struggling, I feel like I am moving toward something big. I feel like I can build something meaningful, become successful, and become the next version of myself.
+
+Maybe even someone who builds with the same level of ambition as people like Elon.
+
+That is my story.
+
+Still struggling.
+Still exploring.
+Still building.
+Still believing.
+`;
 
 export default function StoryToggle() {
   const [open, setOpen] = useState(false);

@@ -27,7 +27,7 @@ const principles = [
   },
   {
     number: "04",
-    text: "Money is oxygen — you don't think about it every second, but you still breathe.",
+    text: "Money is oxygen, you don't think about it every second, but you still breathe.",
   },
 ];
 
@@ -46,7 +46,7 @@ const quotes = [
     author: "Charlie Munger",
   },
   {
-    quote: "Optimism is the engine of achievement.",
+    quote: "We have a duty to be optimistic. Because the future is open, not predetermined and therefore cannot just be accepted: we are all responsible for what it holds",
     author: "David Deutsch",
   },
   {
@@ -54,8 +54,8 @@ const quotes = [
     author: "Steve Jobs",
   },
   {
-    quote: "Hope is not a strategy — it is a survival mechanism.",
-    author: "Hilal Safwan (via The Shawshank Redemption)",
+    quote: "Seek wealth, not money or status. Wealth is having assets that earn while you sleep.",
+    author: "Naval Ravikant",
   },
 ];
 
@@ -108,7 +108,7 @@ export default function Home() {
             put them on the internet.
           </p>
           <p>
-            My operating thesis: one of my random ideas will work — as a
+            My operating thesis: one of my random ideas will work, as a
             digital product, a SaaS, or whatever form the internet rewards. I
             am irrationally optimistic about this, and I think that&apos;s a
             feature, not a bug.
@@ -120,7 +120,7 @@ export default function Home() {
             credentials. I seek working things.
           </p>
           <p>
-            I&apos;m curious about technology, money, Zcash, and how ideas
+            I&apos;m curious about technology, Artificial Intelligence, wealth creation, Zcash, and how ideas
             compound over time.
           </p>
         </div>
@@ -162,11 +162,10 @@ export default function Home() {
         <SectionEyebrow>Philosophy</SectionEyebrow>
         <div className="space-y-4 text-base leading-relaxed text-gray-700">
           <p>
-            My approach is simple: conjecture, build, ship, learn. Not plan,
-            not credential, not wait.
+            My approach is simple: conjecture, build, ship, learn, Error-correct and make progress
           </p>
           <p>
-            I believe good ideas are hard to vary — if I can&apos;t clearly
+            I believe good ideas are hard to vary, if I can&apos;t clearly
             explain why something will work, I shouldn&apos;t build it. But
             once I can, I move fast.
           </p>
