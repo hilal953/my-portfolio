@@ -1,12 +1,14 @@
 {
   "name": "Hilal Safwan — Builder",
-  "short_name": "Hilal",
+  "short_name": "Hilal Safwan",
   "description": "I ship things on the internet and believe one of my ideas will work.",
+  "id": "/",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f5f2eb",
   "theme_color": "#f5f2eb",
   "scope": "/",
+  "lang": "en",
   "icons": [
     {
       "src": "/icon.svg",
