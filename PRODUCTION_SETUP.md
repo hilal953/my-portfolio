@@ -1,78 +1,47 @@
-# Production SEO & Favicon Setup
+# Production Setup — Complete
 
-## ✅ Completed Changes
+All production items are configured. No manual PNG uploads required.
 
-Your portfolio has been configured for production with:
+## What is done
 
-### 1. **Enhanced SEO Metadata** (`app/layout.tsx`)
-- OpenGraph tags for social media preview
-- Twitter Card with `summary_large_image` for better preview
-- Mobile web app configuration (Apple)
-- Robots metadata for search engine crawling
-- Canonical URL to prevent duplicate content
-- Google verification
+| Item | Location | Status |
+|------|----------|--------|
+| Favicon | `app/icon.svg` | Done |
+| Apple touch icon | `app/apple-icon.tsx` (auto-generated PNG) | Done |
+| Social preview (OG) | `app/opengraph-image.tsx` (1200×630) | Done |
+| Twitter preview | `app/twitter-image.tsx` | Done |
+| SEO metadata | `app/layout.tsx` | Done |
+| Site config (single source) | `lib/site.ts` | Done |
+| Robots.txt | `app/robots.ts` → `/robots.txt` | Done |
+| Sitemap | `app/sitemap.ts` → `/sitemap.xml` | Done |
+| PWA manifest | `public/manifest.json` | Done |
+| Google verification | `public/google21cb3952e9841b4b.html` | Done |
 
-### 2. **Web App Manifest** (`public/manifest.json`)
-- PWA (Progressive Web App) support
-- App icons configuration (192x192, 512x512)
-- Installation on home screen support
-- Theme color and display settings
+## Live URLs
 
-### 3. **SEO Files**
-- `app/robots.ts` - Dynamically generated robots.txt
-- `app/sitemap.ts` - XML sitemap for search engines
+- **Site:** https://hilalsafwan.vercel.app
+- **GitHub:** https://github.com/hilal953/my-portfolio
+- **Robots:** https://hilalsafwan.vercel.app/robots.txt
+- **Sitemap:** https://hilalsafwan.vercel.app/sitemap.xml
+- **Manifest:** https://hilalsafwan.vercel.app/manifest.json
 
-### 4. **Favicon**
-- `app/favicon.ico` - Main favicon (already present)
-- Apple touch icon reference configured
+## Deploy workflow
 
----
+```powershell
+npm run build          # verify locally first
+git add .
+git commit -m "your message"
+git push               # Vercel auto-deploys from main
+```
 
-## ⚠️ Action Items (Required for Production)
+## Optional: custom domain
 
-### Icon Assets
-You need to add these PNG images to `/public`:
-- **icon-192.png** (192x192 pixels) - For Android home screen
-- **icon-512.png** (512x512 pixels) - For PWA splash screens
-- **apple-touch-icon.png** (180x180 pixels) - For iOS home screen
+1. Vercel → Project → Settings → Domains → add your domain
+2. Update `NEXT_PUBLIC_SITE_URL` in Vercel environment variables
+3. Or edit `lib/site.ts` default URL
 
-### Social Media Preview
-- Optional: Create **screenshot-1.png** (540x720) & **screenshot-2.png** (1280x720) for PWA screenshots
+## Test after deploy
 
----
-
-## 🚀 Deployment Steps
-
-1. **Add the PNG icon files** (mentioned above) to `/public` folder
-2. **Test locally**: `npm run dev` and check:
-   - Open DevTools → Elements → `<head>`
-   - Verify `<meta name="theme-color">` and manifest link are present
-   - Test social media preview on [Open Graph Debugger](https://www.opengraph.co/)
-3. **Build for production**: `npm run build`
-4. **Deploy to Vercel**:
-   ```bash
-   npm install -g vercel
-   vercel --prod
-   ```
-
----
-
-## 📋 Verification Checklist
-
-- [ ] Icon files added to `/public`
-- [ ] `npm run build` completes without errors
-- [ ] `/robots.txt` is accessible
-- [ ] `/sitemap.xml` is accessible
-- [ ] `/manifest.json` is accessible
-- [ ] Social media preview renders correctly
-- [ ] Favicon displays on browser tab
-- [ ] Mobile app can be installed on Android/iOS
-
----
-
-## 🔗 Useful Links for Testing
-
-- [Open Graph Debugger](https://www.opengraph.co/) - Test social previews
-- [Twitter Card Validator](https://cards-dev.twitter.com/validator) - Test Twitter preview
-- [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly) - Check mobile optimization
-- [Schema.org Validator](https://validator.schema.org/) - Validate structured data
+1. [opengraph.xyz](https://www.opengraph.xyz/) — paste your URL
+2. [Google Search Console](https://search.google.com/search-console) — submit sitemap
+3. Browser tab — confirm **H** favicon appears
