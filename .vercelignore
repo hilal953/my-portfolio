@@ -1,0 +1,6 @@
+.git
+.gitignore
+README.md
+PRODUCTION_SETUP.md
+.env.local
+.env.*.local
