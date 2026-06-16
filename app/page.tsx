@@ -41,6 +41,24 @@ function StatusBadge({ status }: { status: string }) {
   );
 }
 
+function ArrowUpRight({ className = "h-3.5 w-3.5" }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <line x1="7" y1="17" x2="17" y2="7" />
+      <polyline points="7 7 17 7 17 17" />
+    </svg>
+  );
+}
+
 const principles = [
   {
     number: "01",
@@ -367,18 +385,20 @@ export default function Home() {
                         href={project.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm font-semibold text-primary transition-opacity hover:opacity-70"
+                        className="group/link inline-flex items-center gap-1 text-sm font-semibold text-primary transition-opacity hover:opacity-70"
                       >
-                        → Visit [↗]
+                        <span>Visit</span>
+                        <ArrowUpRight className="h-3.5 w-3.5 opacity-80 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                       </a>
                     )}
                     <a
                       href={project.githubHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm font-semibold text-secondary transition-opacity hover:opacity-70"
+                      className="group/link inline-flex items-center gap-1 text-sm font-semibold text-secondary transition-opacity hover:opacity-70"
                     >
-                      GitHub [↗]
+                      <span>GitHub</span>
+                      <ArrowUpRight className="h-3.5 w-3.5 opacity-60 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                     </a>
                   </div>
                 </div>
@@ -407,33 +427,37 @@ export default function Home() {
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-base font-semibold text-primary">
             <a
               href="mailto:hilalmohamed100@gmail.com"
-              className="transition-opacity hover:opacity-70"
+              className="group/link inline-flex items-center gap-1 transition-opacity hover:opacity-70"
             >
-              Email [↗]
+              <span>Email</span>
+              <ArrowUpRight className="h-4 w-4 opacity-70 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
             </a>
             <a
               href="https://x.com/HilalSafwan_30"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-opacity hover:opacity-70"
+              className="group/link inline-flex items-center gap-1 transition-opacity hover:opacity-70"
             >
-              Twitter / X [↗]
+              <span>Twitter / X</span>
+              <ArrowUpRight className="h-4 w-4 opacity-70 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
             </a>
             <a
               href="https://github.com/hilal953"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-opacity hover:opacity-70"
+              className="group/link inline-flex items-center gap-1 transition-opacity hover:opacity-70"
             >
-              GitHub [↗]
+              <span>GitHub</span>
+              <ArrowUpRight className="h-4 w-4 opacity-70 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
             </a>
             <a
               href="https://www.facebook.com/share/1cixwy1To5/"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-opacity hover:opacity-70"
+              className="group/link inline-flex items-center gap-1 transition-opacity hover:opacity-70"
             >
-              Facebook [↗]
+              <span>Facebook</span>
+              <ArrowUpRight className="h-4 w-4 opacity-70 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
             </a>
           </div>
           <p className="mt-8 text-sm text-secondary">
