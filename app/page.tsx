@@ -78,6 +78,29 @@ const projects = [
   },
 ];
 
+const currentLoops = [
+  {
+    title: "Explanation-first building",
+    text:
+      "I try to understand why an idea should work before I polish it. A good product should feel like a clear explanation turned into software.",
+  },
+  {
+    title: "Small bets, real feedback",
+    text:
+      "I am drawn to tiny internet products because they make reality answer quickly. Ship, observe, correct, repeat.",
+  },
+  {
+    title: "AI as leverage",
+    text:
+      "I use AI to move faster, but not to outsource taste. The goal is still to build something useful, sharp, and hard to ignore.",
+  },
+  {
+    title: "Freedom through usefulness",
+    text:
+      "The dream is simple: build something valuable enough that strangers choose to pay for it, and earn freedom honestly through that value.",
+  },
+];
+
 export default function Home() {
   return (
     <main className="mx-auto max-w-2xl px-6 py-16">
@@ -178,6 +201,23 @@ export default function Home() {
               </span>
               <p className="text-base leading-relaxed text-gray-700">
                 {principle.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* CURRENT LOOPS */}
+      <section>
+        <SectionEyebrow>Current Loops</SectionEyebrow>
+        <div className="space-y-6">
+          {currentLoops.map((item) => (
+            <div key={item.title}>
+              <p className="text-base font-bold text-primary">{item.title}</p>
+              <p className="mt-1 text-sm leading-relaxed text-secondary">
+                {item.text}
               </p>
             </div>
           ))}
