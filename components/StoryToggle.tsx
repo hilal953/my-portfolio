@@ -28,20 +28,20 @@ export default function StoryToggle() {
             <div className="absolute -left-[33px] top-1.5 h-4 w-4 rounded-full border-2 border-cream bg-primary transition-transform duration-300 group-hover:scale-125" />
             
             <span className="text-xs font-bold uppercase tracking-widest text-secondary block mb-2">
-              2010 – 2017 · The Spark & The Pivot
+              2010 - 2017 · The Spark & The Pivot
             </span>
             <div className="space-y-4">
               <p>
-                For as long as I can remember, learning has been my playground rather than a chore. Since 2010, curiosity has driven me to connect disjointed ideas, dissecting how the world works simply for the joy of understanding.
+                Learning has always been fun for me, not a chore. Since 2010, I&apos;ve loved figuring out how things work just for the joy of it.
               </p>
               <p>
-                By 2017, this path seemed to point toward medicine. I chose Biology for my Advanced Levels, fueled by the singular ambition of entering medical school. It felt like the definitive path laid out for me.
+                By 2017, I thought I wanted to be a doctor. I studied Biology in school and tried hard to get into medical school. I thought my path was set.
               </p>
               <p className="font-semibold text-primary">
-                Yet, life had different plans, and the doors to medical school remained closed.
+                But I didn&apos;t get in.
               </p>
               <p>
-                That detour was painful, but it forced an honest confrontation with myself. I realized that my drive wasn&apos;t meant to be channeled into a pre-defined career. The structured system of schooling had built my foundation, but a deeper instinct was pulling me elsewhere—not toward a secure job, but toward the freedom of building something of my own.
+                It hurt at the time, but it made me think. I realized I didn&apos;t want a standard career. School gave me a foundation, but I wanted the freedom to build my own things, not just get a safe job.
               </p>
             </div>
           </div>
@@ -51,20 +51,20 @@ export default function StoryToggle() {
             <div className="absolute -left-[33px] top-1.5 h-4 w-4 rounded-full border-2 border-cream bg-primary transition-transform duration-300 group-hover:scale-125" />
             
             <span className="text-xs font-bold uppercase tracking-widest text-secondary block mb-2">
-              2017 – 2020 · Trusting Intuition
+              2017 - 2020 · Finding My Way
             </span>
             <div className="space-y-4">
               <p>
-                Stepping off the conventional path, I began navigating life by intuition. Cinema became a source of solace and direction during this time; watching <span className="font-semibold text-primary italic">The Shawshank Redemption</span> instilled a quiet resilience in me, proving that hope can endure even within the most confining circumstances.
+                I had to figure out what to do next. I watched a lot of movies back then. Watching <span className="font-semibold text-primary italic">The Shawshank Redemption</span> taught me to keep hope alive, even when things feel stuck.
               </p>
               <p>
-                With medicine out of reach, I pivoted to Computer Science in 2020. University, however, was far from smooth. I struggled with the rigidity of the environment, frequently finding myself misunderstood or judged. To an outside observer, I might have looked adrift.
+                Since medicine was out, I started studying Computer Science in 2020. College was hard. I didn&apos;t fit in well with the rigid system, and I often felt misunderstood. To others, I probably looked lost.
               </p>
               <p className="italic border-l-2 border-primary/20 pl-4 text-secondary">
-                Beneath the surface, however, the dots were starting to connect.
+                But things were starting to make sense.
               </p>
               <p>
-                Between lectures, I immersed myself in books, watched inspiring films, and sketched out ideas. My entrepreneurial drive was quietly taking root. Despite the friction and doubts, I persevered, pushed through the challenges, and earned my degree.
+                Outside of class, I read books, watched movies, and wrote down ideas. I wanted to start something of my own. Even though it was stressful and I had doubts, I kept going and finished my degree.
               </p>
             </div>
           </div>
@@ -74,26 +74,23 @@ export default function StoryToggle() {
             <div className="absolute -left-[33px] top-1.5 h-4 w-4 rounded-full border-2 border-cream bg-primary transition-transform duration-300 group-hover:scale-125" />
             
             <span className="text-xs font-bold uppercase tracking-widest text-secondary block mb-2">
-              2020 – 2023 · The Entrepreneurial Spark
+              2020 - 2023 · Learning to Create
             </span>
             <div className="space-y-4">
               <p>
-                A turning point arrived when I read <span className="font-semibold text-primary italic">Crush It</span> by Gary Vaynerchuk. The book gave me the push to share my thoughts publicly on LinkedIn and Twitter. Though initial attempts met with silence, the act of creating in public shifted something inside me.
+                I read <span className="font-semibold text-primary italic">Crush It</span> by Gary Vaynerchuk and started writing on LinkedIn and Twitter. At first, nobody read my posts, but sharing my thoughts in public changed how I thought.
               </p>
               <p>
-                While my peers polished resumes for traditional roles, my focus shifted entirely toward creation. Reading <span className="font-semibold text-primary italic">The Almanack of Naval Ravikant</span> reshaped my worldview, reinforced by the timeless principles of Napoleon Hill’s <span className="font-semibold text-primary italic">Think and Grow Rich</span>. Operating on a shoestring budget during these years wasn&apos;t easy, but the financial constraint gave me real skin in the game, making every step feel personal, urgent, and real.
+                While my friends were working on resumes, I wanted to build things. I read <span className="font-semibold text-primary italic">The Almanack of Naval Ravikant</span> and <span className="font-semibold text-primary italic">Think and Grow Rich</span>, which changed my outlook. I had very little money, which was hard, but it meant I had to make things work. Every step mattered.
               </p>
               <p>
-                Discovering Matt Gray solidified my desire to build digital products and engineer my own freedom. Through Twitter, I found a digital tribe of builders and thinkers who showed me what was possible: Sahil Lavingia, Marc Lou, Jack Friks, Haseeb Qureshi, Suhail, and David Senra.
+                I saw builders like Sahil Lavingia, Marc Lou, Jack Friks, Haseeb Qureshi, Suhail, and David Senra online. They showed me that you can build digital products and live on your own terms.
               </p>
               <p>
-                I devoured books and films that challenged conventional wisdom—Balaji Srinivasan’s <span className="font-semibold text-primary italic">The Anthology of Balaji</span>, Lavingia&apos;s <span className="font-semibold text-primary italic">The Minimalist Entrepreneur</span>, and films like <span className="font-semibold text-primary italic">Moneyball</span>, <span className="font-semibold text-primary italic">Gladiator</span>, and <span className="font-semibold text-primary italic">The Big Short</span>.
+                I read books and watched movies like <span className="font-semibold text-primary italic">Moneyball</span>, <span className="font-semibold text-primary italic">Gladiator</span>, and <span className="font-semibold text-primary italic">The Big Short</span>. <span className="font-semibold text-primary italic">The Big Short</span> showed me that the crowd is often wrong, and the truth is usually right in front of us if we look closely.
               </p>
               <p>
-                <span className="font-semibold text-primary italic">The Big Short</span> in particular altered how I look at systems. It taught me that truth is often hidden in plain sight, and that those who dare to think differently are often the ones who see what the crowd misses.
-              </p>
-              <p>
-                Immersing myself in epics like <span className="font-semibold text-primary italic">Dune</span> and <span className="font-semibold text-primary italic">The Lord of the Rings</span>, I kept writing and sharing online despite the lack of traction. Indie hacking was no longer just an interest; it had become an undeniable calling.
+                I loved stories like <span className="font-semibold text-primary italic">Dune</span> and <span className="font-semibold text-primary italic">The Lord of the Rings</span>. I kept writing and posting online, even when no one was paying attention. I knew I wanted to build things on the internet.
               </p>
             </div>
           </div>
@@ -103,25 +100,25 @@ export default function StoryToggle() {
             <div className="absolute -left-[33px] top-1.5 h-4 w-4 rounded-full border-2 border-cream bg-primary transition-transform duration-300 group-hover:scale-125" />
             
             <span className="text-xs font-bold uppercase tracking-widest text-secondary block mb-2">
-              Present · The Evolutionary Lens
+              Present · How I Think
             </span>
             <div className="space-y-4">
               <p>
-                My intellectual framework fell into place when I discovered David Deutsch’s <span className="font-semibold text-primary italic">The Beginning of Infinity</span>, alongside the works of Nassim Taleb. Deutsch reframed my understanding of progress, leading me to view life, ideas, and products through an evolutionary lens—not just biologically, but as a system of continuous variation, criticism, and selection.
+                I read <span className="font-semibold text-primary italic">The Beginning of Infinity</span> by David Deutsch and the books of Nassim Taleb. They changed how I see progress. I started viewing life and products as a process of evolution.
               </p>
               
               <div className="bg-white/40 border border-divider rounded-xl p-4 my-6">
                 <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">My Framework</p>
                 <p className="text-sm text-secondary leading-relaxed">
-                  Every product attempt is a <span className="font-semibold text-primary">variation</span>. Every setback is <span className="font-semibold text-primary">feedback</span>. Every correction is <span className="font-semibold text-primary">selection</span>. The ideas tested, the mistakes made, and the lessons learned are all parts of a singular evolutionary process.
+                  Every product is a test. Every setback is feedback. Every fix is selection. The mistakes and lessons are just part of the process.
                 </p>
               </div>
 
               <p>
-                From the outside, this trial-and-error approach might look chaotic. Yet, I believe that through constant iteration, the fittest ideas will eventually survive and crystallize into something of true value.
+                To others, this trial-and-error might look messy. But I believe that if you keep trying and improving, the best ideas will survive and turn into something valuable.
               </p>
               <p>
-                This journey has also taught me that I don&apos;t fit easily into conventional molds. Standard employment structures often feel restrictive, and I rarely stay long in traditional roles. Rather than a flaw, I&apos;ve come to see this as a design feature: I am simply built to explore, create, and carve out my own path.
+                I&apos;ve also realized I don&apos;t fit into typical jobs. I don&apos;t stay long in traditional roles because they feel too tight. I don&apos;t think that&apos;s a bad thing anymore. It&apos;s just who I am. I&apos;m built to explore and build my own way.
               </p>
             </div>
           </div>
@@ -131,63 +128,63 @@ export default function StoryToggle() {
             <div className="absolute -left-[33px] top-1.5 h-4 w-4 rounded-full border-2 border-cream bg-primary transition-transform duration-300 group-hover:scale-125" />
             
             <span className="text-xs font-bold uppercase tracking-widest text-secondary block mb-2">
-              The Outlook
+              My Outlook
             </span>
             <div className="space-y-4">
               <p>
-                Choosing this path means accepting its inherent instability.
+                This path is unstable, and I accept that.
               </p>
               <p>
-                Surviving on a day-to-day basis requires treating capital like oxygen—essential, background, but never the sole purpose of existence. It is always there, keeping me in the game, but it doesn&apos;t define the journey.
+                Money is like oxygen. You need it to survive, but it isn&apos;t the point of living. It keeps me in the game, but it isn&apos;t the goal.
               </p>
               <p>
-                Listening to David Senra&apos;s podcast offers a profound sense of camaraderie. The stories of obsessive founders and builders serve as a reassuring reminder that being different don&apos;t mean being lost; it means being in the process of becoming.
+                Listening to David Senra&apos;s podcast makes me feel less alone. Hearing about founders who were obsessed reminds me that being different doesn&apos;t mean you are lost. It just means you are building something new.
               </p>
               
               <blockquote className="italic border-l-2 border-primary/30 pl-4 py-1 text-secondary my-6">
-                &ldquo;The history of those who built the world reminds me that obsession isn&apos;t a defect—it is the raw material of creation. The people who cannot fit into existing systems are the ones who must build new ones.&rdquo;
+                &ldquo;The history of people who built the world shows that obsession is not a flaw. The people who cannot fit into existing systems are the ones who have to build new ones.&rdquo;
               </blockquote>
 
               <p>
-                Rereading Jorgenson&apos;s <span className="font-semibold text-primary italic">The Elon Book</span> and Deutsch&apos;s <span className="font-semibold text-primary italic">The Beginning of Infinity</span> reinforces my conviction that even amidst the struggles, I am moving toward something significant.
+                Rereading Jorgenson&apos;s <span className="font-semibold text-primary italic">The Elon Book</span> and Deutsch&apos;s <span className="font-semibold text-primary italic">The Beginning of Infinity</span> makes me feel sure that the struggle is worth it.
               </p>
               <p>
-                My ultimate belief is that this combination of taste, curiosity, resilience, and evolutionary learning will eventually yield a remarkable product—something that delivers genuine value to the world while securing my own independence.
+                I believe that if I keep learning, exploring, and building, I will eventually make something useful that helps people and gives me my independence.
               </p>
               <p>
-                Call it irrational optimism, but it is precisely this optimism that fuels the fire.
+                Maybe that is too optimistic, but that optimism keeps me going.
               </p>
               
               <div className="pt-6 border-t border-divider/50">
                 <p className="text-base font-bold text-primary mb-3">
-                  While the exact destination remains unwritten, the process is clear:
+                  I don&apos;t know exactly where I will end up, but I know how to get there:
                 </p>
                 <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm text-secondary font-medium pl-0">
                   <li className="flex items-center gap-2">
                     <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-                    Continuous learning.
+                    Keep learning.
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-                    Relentless exploration.
+                    Keep exploring.
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-                    Constant experimentation.
+                    Keep trying new things.
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-                    Dedicated building.
+                    Keep building.
                   </li>
                   <li className="flex items-center gap-2 sm:col-span-2">
                     <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-                    Unwavering belief.
+                    Keep believing.
                   </li>
                 </ul>
               </div>
 
               <p className="text-lg font-black tracking-tight text-primary mt-6 pt-4 border-t border-divider/30">
-                Success isn&apos;t something to be found; it is something we evolve into.
+                You don&apos;t just find success. You grow into it.
               </p>
             </div>
           </div>
