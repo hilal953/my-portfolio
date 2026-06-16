@@ -13,5 +13,5 @@ export const siteConfig = {
   github: "https://github.com/hilal953",
   x: "https://x.com/HilalSafwan_30",
   facebook: "https://www.facebook.com/share/1cixwy1To5/",
-  ogDescription: "Builder. Vibecoder. Optimist. Sri Lanka → Internet.",
+  ogDescription: "Builder. Vibe coder. Optimist. Sri Lanka → Internet.",
 };

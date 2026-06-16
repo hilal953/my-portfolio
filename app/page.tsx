@@ -46,7 +46,8 @@ const quotes = [
     author: "Charlie Munger",
   },
   {
-    quote: "We have a duty to be optimistic. Because the future is open, not predetermined and therefore cannot just be accepted: we are all responsible for what it holds",
+    quote:
+      "We have a duty to be optimistic. Because the future is open, not predetermined and therefore cannot just be accepted: we are all responsible for what it holds.",
     author: "David Deutsch",
   },
   {
@@ -111,7 +112,7 @@ export default function Home() {
           <span className="animate-pulse">▍</span>
         </h1>
         <p className="mt-6 text-lg font-semibold text-primary md:text-xl">
-          Builder. Vibecoder. Optimist.
+          Builder. Vibe coder. Optimist.
           <br />
           Sri Lanka → Internet.
         </p>
@@ -143,8 +144,8 @@ export default function Home() {
             credentials. I seek working things.
           </p>
           <p>
-            I&apos;m curious about technology, Artificial Intelligence, wealth creation, Zcash, and how ideas
-            compound over time.
+            I&apos;m curious about technology, artificial intelligence, wealth
+            creation, Zcash, and how ideas compound over time.
           </p>
         </div>
       </section>
@@ -185,12 +186,13 @@ export default function Home() {
         <SectionEyebrow>Philosophy</SectionEyebrow>
         <div className="space-y-4 text-base leading-relaxed text-gray-700">
           <p>
-            My approach is simple: conjecture, build, ship, learn, Error-correct and make progress
+            My approach is simple: conjecture, build, ship, learn,
+            error-correct, and make progress.
           </p>
           <p>
-            I believe good ideas are hard to vary, if I can&apos;t clearly
-            explain why something will work, I shouldn&apos;t build it. But
-            once I can, I move fast.
+            I believe good ideas are hard to vary. If I can&apos;t clearly
+            explain why something will work, I shouldn&apos;t build it. But once I
+            can, I move fast.
           </p>
         </div>
         <div className="mt-8 space-y-6">
@@ -317,8 +319,8 @@ export default function Home() {
           </a>
         </div>
         <p className="mt-8 text-sm text-secondary">
-          Looping on: David Deutsch · Nassim Taleb · Naval Ravikant · Zcash ·
-          Andrej Karpathy
+          Inputs I keep returning to: The Beginning of Infinity · Nassim Taleb
+          · Naval Ravikant · Zcash · AI agents · small internet products
         </p>
         <p className="mt-12 text-sm text-secondary">
           © 2026 Hilal Safwan. Still building. Still believing.
