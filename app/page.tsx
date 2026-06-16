@@ -312,7 +312,7 @@ export default function Home() {
       <ScrollFadeIn>
         <section>
           <SectionEyebrow>Quotes to Build By</SectionEyebrow>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {quotes.map((item, i) => (
               <ScrollFadeIn key={item.quote} delay={i * 50}>
                 <div className="flex h-full flex-col justify-between rounded-lg border border-divider bg-white/30 p-4 transition-colors duration-200 hover:border-primary/20">
