@@ -66,7 +66,7 @@ export default function StoryToggle() {
         onClick={() => setOpen(!open)}
         className="text-base font-semibold text-primary hover:opacity-70"
       >
-        {open ? "Hide my story" : "Read my story ->"}
+        {open ? "Hide my story" : "Read my story →"}
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ${
