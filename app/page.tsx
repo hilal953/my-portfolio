@@ -1,3 +1,4 @@
+import Image from "next/image";
 import StoryToggle from "@/components/StoryToggle";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -168,19 +169,31 @@ export default function Home() {
 
       {/* HERO */}
       <ScrollFadeIn>
-        <section>
-          <h1 className="text-5xl font-black uppercase tracking-tight md:text-7xl">
-            Hilal Safwan.
-            <span className="animate-pulse">▍</span>
-          </h1>
-          <p className="mt-6 text-lg font-semibold text-primary md:text-xl">
-            Builder. Vibe coder. Optimist.
-            <br />
-            Sri Lanka → Internet.
-          </p>
-          <p className="mt-4 text-sm text-secondary">
-            I ship things on the internet and believe one of them will work.
-          </p>
+        <section className="flex flex-col-reverse gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h1 className="text-5xl font-black uppercase tracking-tight md:text-7xl">
+              Hilal Safwan.
+              <span className="animate-pulse">▍</span>
+            </h1>
+            <p className="mt-6 text-lg font-semibold text-primary md:text-xl">
+              Builder. Vibe coder. Optimist.
+              <br />
+              Sri Lanka → Internet.
+            </p>
+            <p className="mt-4 text-sm text-secondary">
+              I ship things on the internet and believe one of them will work.
+            </p>
+          </div>
+          <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl border border-divider bg-white/20 p-1 shadow-sm sm:h-28 sm:w-28">
+            <Image
+              src="/profile.jpg"
+              alt="Hilal Safwan"
+              width={112}
+              height={112}
+              priority
+              className="h-full w-full rounded-xl object-cover"
+            />
+          </div>
         </section>
       </ScrollFadeIn>
 
