@@ -119,6 +119,11 @@ const quotes = [
       "The best thing about the internet is that it lets small teams do big things.",
     author: "Marc Lou",
   },
+  {
+    quote:
+      "Every problem is soluble. The fastest way to find the solution is to build, ship, and let the real world be your feedback loop.",
+    author: "Indie Ethos",
+  },
 ];
 
 const projects = [
@@ -368,7 +373,7 @@ export default function Home() {
             <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl border border-divider bg-white p-1 shadow-sm sm:h-28 sm:w-28">
               <Image
                 src="/logoL.jpeg"
-                alt="Leverage One"
+                alt="Leverage"
                 width={112}
                 height={112}
                 className="h-full w-full rounded-lg object-cover"
@@ -378,16 +383,16 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div>
                   <h3 className="text-xl font-bold text-primary sm:text-2xl">
-                    Leverage One
+                    Leverage
                   </h3>
                   <p className="mt-1 text-sm font-medium text-secondary">
-                    Founder · Parent Company
+                    Founder
                   </p>
                 </div>
                 <StatusBadge status="Live" />
               </div>
               <p className="mt-4 text-sm leading-relaxed text-gray-700 sm:text-base">
-                My main business and the engine behind my work. Operating as a chill, Marc Lou-style indie studio to build, launch, and scale all my internet bets under one umbrella.
+                My main business and the engine behind my work. An independent studio dedicated to building, launching, and scaling high-impact internet products under a single umbrella.
               </p>
               <div className="mt-5">
                 <a
@@ -396,7 +401,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="group/link inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-opacity hover:opacity-70"
                 >
-                  <span>leverage-one.vercel.app</span>
+                  <span>Visit Website</span>
                   <ArrowUpRight className="h-4 w-4 opacity-80 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                 </a>
               </div>
