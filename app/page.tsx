@@ -124,6 +124,17 @@ const quotes = [
 const projects = [
   {
     number: "01",
+    tag: "Product",
+    status: "Shipped",
+    title: "Aura Reads",
+    description:
+      "Premium book summaries that hit different. David Senra-level insights for books worth explaining.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    href: "https://aurareads-kappa.vercel.app/",
+    githubHref: undefined,
+  },
+  {
+    number: "02",
     tag: "Dev",
     status: "Shipped",
     title: "Car Wash Management System",
@@ -134,7 +145,7 @@ const projects = [
     githubHref: "https://github.com/hilal953/carwash-app",
   },
   {
-    number: "02",
+    number: "03",
     tag: "Dev",
     status: "Shipped",
     title: "Weather App",
