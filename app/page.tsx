@@ -360,6 +360,53 @@ export default function Home() {
 
       <Divider />
 
+      {/* MAIN VENTURE */}
+      <ScrollFadeIn>
+        <section>
+          <SectionEyebrow>Main Venture</SectionEyebrow>
+          <div className="group rounded-xl border border-divider bg-white/30 p-6 sm:p-8 transition-all duration-200 hover:border-primary/20 hover:shadow-sm flex flex-col sm:flex-row gap-6 sm:items-center">
+            <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl border border-divider bg-white p-1 shadow-sm sm:h-28 sm:w-28">
+              <Image
+                src="/logoL.jpeg"
+                alt="Leverage One"
+                width={112}
+                height={112}
+                className="h-full w-full rounded-lg object-cover"
+              />
+            </div>
+            <div className="flex-1">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                  <h3 className="text-xl font-bold text-primary sm:text-2xl">
+                    Leverage One
+                  </h3>
+                  <p className="mt-1 text-sm font-medium text-secondary">
+                    Founder · Parent Company
+                  </p>
+                </div>
+                <StatusBadge status="Live" />
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-gray-700 sm:text-base">
+                My main business and the engine behind my work. Operating as a chill, Marc Lou-style indie studio to build, launch, and scale all my internet bets under one umbrella.
+              </p>
+              <div className="mt-5">
+                <a
+                  href="https://leverage-one.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/link inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-opacity hover:opacity-70"
+                >
+                  <span>leverage-one.vercel.app</span>
+                  <ArrowUpRight className="h-4 w-4 opacity-80 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollFadeIn>
+
+      <Divider />
+
       {/* PROJECTS */}
       <ScrollFadeIn>
         <section>
