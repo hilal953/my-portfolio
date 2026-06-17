@@ -130,7 +130,7 @@ const projects = [
     description:
       "Premium book summaries that hit different. David Senra-level insights for books worth explaining.",
     stack: ["HTML", "CSS", "JavaScript"],
-    href: "https://aurareads-kappa.vercel.app/",
+    href: "https://aurareads-app.vercel.app/",
     githubHref: undefined,
   },
   {
