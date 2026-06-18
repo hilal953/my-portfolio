@@ -88,7 +88,7 @@ export default function Home() {
         </section>
 
         {/* BENTO GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[300px] gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[minmax(300px,auto)] gap-6">
           
           {/* LEVERAGE (Span 2 cols) */}
           <FadeIn delay={0.3} className="md:col-span-2 h-full">
@@ -213,6 +213,20 @@ export default function Home() {
           </FadeIn>
 
         </div>
+
+        {/* FOOTER */}
+        <FadeIn delay={0.8}>
+          <footer className="mt-32 border-t border-white/10 pt-12 pb-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <p className="text-neutral-500 text-sm">
+              © {new Date().getFullYear()} Hilal Safwan. Still building. Still believing.
+            </p>
+            <div className="flex gap-6 text-sm text-neutral-500">
+              <a href="https://x.com/HilalSafwan_30" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Twitter</a>
+              <a href="https://github.com/hilal953" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a>
+              <a href="https://www.linkedin.com/in/hilal-safwan" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+            </div>
+          </footer>
+        </FadeIn>
       </main>
     </div>
   );
