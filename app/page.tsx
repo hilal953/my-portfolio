@@ -129,7 +129,9 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
                     Aura Reads <ArrowUpRight className="w-4 h-4 text-amber-500/50 group-hover:text-amber-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                   </h3>
-                  <p className="text-sm text-neutral-400 leading-relaxed">Premium book summaries that hit different. David Senra-level insights for books worth explaining.</p>
+                  <p className="text-sm text-neutral-400 leading-relaxed">
+                    Premium book summaries that hit different. High-signal insights for books worth reading.
+                  </p>
                 </div>
               </BentoCard>
             </a>
