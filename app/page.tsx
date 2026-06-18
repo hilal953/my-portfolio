@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, Terminal, Sparkles, Orbit, Zap } from "lucide-react";
+import { ArrowUpRight, Mail, Terminal, Sparkles, Orbit, Zap, Quote, Code2, BookOpen } from "lucide-react";
+import StoryToggle from "@/components/StoryToggle";
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
   <motion.div
@@ -26,6 +27,24 @@ const BentoCard = ({ children, className = "", glow = false }: { children: React
     </div>
   </div>
 );
+
+const quotes = [
+  { quote: "Problems are inevitable; problems are soluble.", author: "David Deutsch" },
+  { quote: "The only rules are the ones dictated by the laws of physics. Everything else is just a recommendation.", author: "Elon Musk" },
+  { quote: "Show me the incentive and I'll show you the outcome.", author: "Charlie Munger" },
+  { quote: "We have a duty to be optimistic. Because the future is open, not predetermined...", author: "David Deutsch" },
+  { quote: "I want to put a dent in the universe.", author: "Steve Jobs" },
+  { quote: "Seek wealth, not money or status. Wealth is having assets that earn while you sleep.", author: "Naval Ravikant" },
+  { quote: "What important truth do very few people agree with you on?", author: "Peter Thiel" },
+  { quote: "Competition is for losers.", author: "Peter Thiel" },
+  { quote: "The best thing about the internet is that it lets small teams do big things.", author: "Marc Lou" }
+];
+
+const skillCategories = [
+  { label: "Languages", skills: ["JavaScript", "TypeScript", "Python", "Java"] },
+  { label: "Stack", skills: ["Next.js", "React", "Node.js", "PostgreSQL", "Prisma", "Tailwind CSS"] },
+  { label: "Interests", skills: ["Zcash", "Crypto", "Digital Products", "SaaS", "AI Agents", "MCP"] },
+];
 
 const FloatingDock = () => (
   <motion.div
@@ -214,10 +233,73 @@ export default function Home() {
             </BentoCard>
           </FadeIn>
 
+          {/* SKILLS */}
+          <FadeIn delay={0.8} className="md:col-span-3">
+            <BentoCard>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 rounded-xl bg-white/5 text-white">
+                  <Code2 className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Technical Arsenal</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {skillCategories.map((category) => (
+                  <div key={category.label}>
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-500">
+                      {category.label}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill) => (
+                        <span key={skill} className="inline-block rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-neutral-300 transition-colors duration-200 hover:bg-white/10 hover:text-white">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </BentoCard>
+          </FadeIn>
+
+          {/* QUOTES */}
+          <FadeIn delay={0.9} className="md:col-span-3">
+            <BentoCard>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 rounded-xl bg-white/5 text-white">
+                  <Quote className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Quotes to Build By</h3>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {quotes.map((item, i) => (
+                  <div key={i} className="flex flex-col justify-between rounded-2xl border border-white/5 bg-white/[0.01] p-5 transition-colors duration-200 hover:border-white/10 hover:bg-white/[0.02]">
+                    <p className="text-sm italic leading-relaxed text-neutral-400">&quot;{item.quote}&quot;</p>
+                    <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-neutral-500">— {item.author}</p>
+                  </div>
+                ))}
+              </div>
+            </BentoCard>
+          </FadeIn>
+
+          {/* MY STORY */}
+          <FadeIn delay={1.0} className="md:col-span-3">
+            <BentoCard>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 rounded-xl bg-white/5 text-white">
+                  <BookOpen className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-white">My Story</h3>
+              </div>
+              <div className="text-neutral-400">
+                <StoryToggle />
+              </div>
+            </BentoCard>
+          </FadeIn>
+
         </div>
 
         {/* FOOTER */}
-        <FadeIn delay={0.8}>
+        <FadeIn delay={1.1}>
           <footer className="mt-32 border-t border-white/10 pt-12 pb-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <p className="text-neutral-500 text-sm">
               © {new Date().getFullYear()} Hilal Safwan. Still building. Still believing.
