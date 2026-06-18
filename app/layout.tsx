@@ -36,14 +36,6 @@ export const metadata: Metadata = {
   creator: siteConfig.personName,
   publisher: siteConfig.personName,
   manifest: "/manifest.json",
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
-  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
