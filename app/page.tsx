@@ -1,537 +1,219 @@
+"use client";
+
 import Image from "next/image";
-import StoryToggle from "@/components/StoryToggle";
-import ScrollFadeIn from "@/components/ScrollFadeIn";
-import ScrollToTop from "@/components/ScrollToTop";
+import { motion } from "framer-motion";
+import { ArrowUpRight, Mail, Terminal, Sparkles, Orbit, Zap } from "lucide-react";
 
-function SectionEyebrow({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-gray-400">
+const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-50px" }}
+    transition={{ duration: 0.7, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
+    className={className}
+  >
+    {children}
+  </motion.div>
+);
+
+const BentoCard = ({ children, className = "", glow = false }: { children: React.ReactNode; className?: string; glow?: boolean }) => (
+  <div className={`group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md p-6 transition-all duration-500 hover:bg-white/[0.04] hover:border-white/20 ${className}`}>
+    {glow && (
+      <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-white/5 blur-[80px] transition-all duration-500 group-hover:bg-white/10" />
+    )}
+    <div className="relative z-10 h-full flex flex-col">
       {children}
-    </p>
-  );
-}
+    </div>
+  </div>
+);
 
-function Divider() {
-  return <hr className="my-12 border-[#e0dcd4]" />;
-}
-
-function SkillPill({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="inline-block rounded-full border border-divider bg-white/40 px-3 py-1 text-xs font-medium text-secondary transition-colors duration-200 hover:border-primary/30 hover:text-primary">
-      {children}
-    </span>
-  );
-}
-
-function StatusBadge({ status }: { status: string }) {
-  const colors: Record<string, string> = {
-    Shipped: "text-green-600 border-green-600/30 bg-green-50",
-    "In Progress": "text-amber-600 border-amber-600/30 bg-amber-50",
-    Live: "text-green-600 border-green-600/30 bg-green-50",
-  };
-  return (
-    <span
-      className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${
-        colors[status] || "text-gray-500 border-gray-300 bg-gray-50"
-      }`}
-    >
-      <span className="inline-block h-1.5 w-1.5 rounded-full bg-current" />
-      {status}
-    </span>
-  );
-}
-
-function ArrowUpRight({ className = "h-3.5 w-3.5" }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <line x1="7" y1="17" x2="17" y2="7" />
-      <polyline points="7 7 17 7 17 17" />
-    </svg>
-  );
-}
-
-const principles = [
-  {
-    number: "01",
-    text: "Ship over theorize. A deployed product teaches more than a perfect plan.",
-  },
-  {
-    number: "02",
-    text: "Optimism is a strategy. Pessimism narrows the solution space.",
-  },
-  {
-    number: "03",
-    text: "One good idea, compounded, is enough.",
-  },
-  {
-    number: "04",
-    text: "Money is oxygen, you don't think about it every second, but you still breathe.",
-  },
-];
-
-const quotes = [
-  {
-    quote: "Problems are inevitable; problems are soluble.",
-    author: "David Deutsch",
-  },
-  {
-    quote:
-      "The only rules are the ones dictated by the laws of physics. Everything else is just a recommendation.",
-    author: "Elon Musk",
-  },
-  {
-    quote: "Show me the incentive and I'll show you the outcome.",
-    author: "Charlie Munger",
-  },
-  {
-    quote:
-      "We have a duty to be optimistic. Because the future is open, not predetermined and therefore cannot just be accepted: we are all responsible for what it holds.",
-    author: "David Deutsch",
-  },
-  {
-    quote: "I want to put a dent in the universe.",
-    author: "Steve Jobs",
-  },
-  {
-    quote:
-      "Seek wealth, not money or status. Wealth is having assets that earn while you sleep.",
-    author: "Naval Ravikant",
-  },
-  {
-    quote: "What important truth do very few people agree with you on?",
-    author: "Peter Thiel",
-  },
-  {
-    quote: "Competition is for losers.",
-    author: "Peter Thiel",
-  },
-  {
-    quote:
-      "The best thing about the internet is that it lets small teams do big things.",
-    author: "Marc Lou",
-  },
-  {
-    quote:
-      "Every problem is soluble. The fastest way to find the solution is to build, ship, and let the real world be your feedback loop.",
-    author: "Indie Ethos",
-  },
-];
-
-const projects = [
-  {
-    number: "01",
-    tag: "Product",
-    status: "Shipped",
-    title: "Aura Reads",
-    description:
-      "Premium book summaries that hit different. David Senra-level insights for books worth explaining.",
-    stack: ["HTML", "CSS", "JavaScript"],
-    href: "https://aurareads-app.vercel.app/",
-    githubHref: undefined,
-  },
-  {
-    number: "02",
-    tag: "Dev",
-    status: "Shipped",
-    title: "Car Wash Management System",
-    description:
-      "A full-stack booking and management app for a car wash business. Built with Next.js, PostgreSQL, Prisma.",
-    stack: ["Next.js", "PostgreSQL", "Prisma"],
-    href: "https://carwash-app-tau.vercel.app/",
-    githubHref: "https://github.com/hilal953/carwash-app",
-  },
-  {
-    number: "03",
-    tag: "Dev",
-    status: "Shipped",
-    title: "Weather App",
-    description:
-      "Real-time weather application. Clean UI, location-based data.",
-    stack: ["Node.js", "API", "Backend"],
-    href: undefined,
-    githubHref: "https://github.com/hilal953/weather-service",
-  },
-];
-
-const currentLoops = [
-  {
-    title: "Explanation-first building",
-    text: "I try to understand why an idea should work before I polish it. A good product should feel like a clear explanation turned into software.",
-  },
-  {
-    title: "Small bets, real feedback",
-    text: "I am drawn to tiny internet products because they make reality answer quickly. Ship, observe, correct, repeat.",
-  },
-  {
-    title: "AI as leverage",
-    text: "I use AI to move faster, but not to outsource taste. The goal is still to build something useful, sharp, and hard to ignore.",
-  },
-  {
-    title: "Freedom through usefulness",
-    text: "The dream is simple: build something valuable enough that strangers choose to pay for it, and earn freedom honestly through that value.",
-  },
-];
-
-const skillCategories = [
-  {
-    label: "Programming Languages",
-    skills: ["JavaScript", "TypeScript", "Python", "Java"],
-  },
-  {
-    label: "Tools & Stack",
-    skills: ["Next.js", "React", "Node.js", "PostgreSQL", "Prisma", "Tailwind CSS"],
-  },
-  {
-    label: "Interests",
-    skills: ["Zcash", "Crypto", "Digital Products", "SaaS", "AI Agents", "MCP"],
-  },
-];
+const FloatingDock = () => (
+  <motion.div
+    initial={{ y: 100, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ delay: 0.8, duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
+    className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 rounded-full border border-white/10 bg-black/50 backdrop-blur-xl px-6 py-3 shadow-2xl"
+  >
+    <a href="https://x.com/HilalSafwan_30" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors">
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+    <a href="https://github.com/hilal953" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors">
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+    <a href="mailto:hilalmohamed100@gmail.com" className="text-neutral-400 hover:text-white transition-colors">
+      <Mail className="w-5 h-5" />
+    </a>
+  </motion.div>
+);
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-2xl px-6 py-16">
-      <ScrollToTop />
+    <div className="min-h-screen bg-dark-bg selection:bg-white/20 text-neutral-200 font-sans relative overflow-x-hidden">
+      {/* Background Glows */}
+      <div className="fixed top-[-20%] left-[-10%] h-[50vw] w-[50vw] rounded-full bg-white/[0.02] blur-[120px] pointer-events-none" />
+      <div className="fixed bottom-[-20%] right-[-10%] h-[50vw] w-[50vw] rounded-full bg-amber-500/[0.02] blur-[120px] pointer-events-none" />
 
-      {/* HERO */}
-      <ScrollFadeIn>
-        <section className="flex flex-col-reverse gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h1 className="text-5xl font-black uppercase tracking-tight md:text-7xl">
-              Hilal Safwan.
-              <span className="animate-pulse">▍</span>
+      <FloatingDock />
+
+      <main className="mx-auto max-w-5xl px-6 py-24 pb-48 relative z-10">
+        
+        {/* HERO SECTION */}
+        <section className="mb-24 mt-12 flex flex-col md:flex-row md:items-end justify-between gap-12">
+          <FadeIn className="max-w-2xl">
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-white mb-6 leading-tight">
+              Hilal Safwan
             </h1>
-            <p className="mt-6 text-lg font-semibold text-primary md:text-xl">
-              Builder. Vibe coder. Optimist.
-              <br />
-              Sri Lanka → Internet.
+            <p className="text-xl md:text-2xl font-medium text-neutral-400 mb-4 tracking-tight">
+              Builder. Vibe Coder. Optimist. <br />
+              <span className="text-neutral-500">Sri Lanka → Internet.</span>
             </p>
-            <p className="mt-4 text-sm text-secondary">
-              I ship things on the internet and believe one of them will work.
+            <p className="text-neutral-500 leading-relaxed max-w-lg">
+              I ship things on the internet and believe one of them will work. Focused on high-leverage products, clean code, and extreme polish.
             </p>
-          </div>
-          <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl border border-divider bg-white/20 p-1 shadow-sm sm:h-28 sm:w-28">
-            <Image
-              src="/profile.jpg"
-              alt="Hilal Safwan"
-              width={112}
-              height={112}
-              priority
-              className="h-full w-full rounded-xl object-cover"
-            />
-          </div>
-        </section>
-      </ScrollFadeIn>
-
-      <Divider />
-
-      {/* ABOUT */}
-      <ScrollFadeIn>
-        <section>
-          <SectionEyebrow>About</SectionEyebrow>
-          <div className="space-y-4 text-base leading-relaxed text-gray-700">
-            <p>
-              Hi. I&apos;m Hilal from Sri Lanka. I build software products and
-              put them on the internet.
-            </p>
-            <p>
-              My operating thesis: one of my random ideas will work, as a
-              digital product, a SaaS, or whatever form the internet rewards. I
-              am irrationally optimistic about this, and I think that&apos;s a
-              feature, not a bug.
-            </p>
-            <p>
-              My thinking is shaped by David Deutsch&apos;s conjecture-and-criticism
-              framework, Nassim Taleb&apos;s antifragility, and the indie hacker
-              ethos of people like Pieter Levels and Marc Lou. I don&apos;t seek
-              credentials. I seek working things.
-            </p>
-            <p>
-              I&apos;m curious about technology, artificial intelligence, wealth
-              creation, Zcash, and how ideas compound over time.
-            </p>
-          </div>
-        </section>
-      </ScrollFadeIn>
-
-      <Divider />
-
-      {/* SKILLS */}
-      <ScrollFadeIn>
-        <section>
-          <SectionEyebrow>Skills</SectionEyebrow>
-          <div className="space-y-6">
-            {skillCategories.map((category) => (
-              <div key={category.label}>
-                <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-gray-400">
-                  {category.label}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill) => (
-                    <SkillPill key={skill}>{skill}</SkillPill>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      </ScrollFadeIn>
-
-      <Divider />
-
-      {/* PHILOSOPHY */}
-      <ScrollFadeIn>
-        <section>
-          <SectionEyebrow>Philosophy</SectionEyebrow>
-          <div className="space-y-4 text-base leading-relaxed text-gray-700">
-            <p>
-              My approach is simple: conjecture, build, ship, learn,
-              error-correct, and make progress.
-            </p>
-            <p>
-              I believe good ideas are hard to vary. If I can&apos;t clearly
-              explain why something will work, I shouldn&apos;t build it. But once I
-              can, I move fast.
-            </p>
-          </div>
-          <div className="mt-8 space-y-6">
-            {principles.map((principle, i) => (
-              <ScrollFadeIn key={principle.number} delay={i * 80}>
-                <div className="flex gap-4">
-                  <span className="shrink-0 text-sm text-secondary">
-                    {principle.number}
-                  </span>
-                  <p className="text-base leading-relaxed text-gray-700">
-                    {principle.text}
-                  </p>
-                </div>
-              </ScrollFadeIn>
-            ))}
-          </div>
-        </section>
-      </ScrollFadeIn>
-
-      <Divider />
-
-      {/* CURRENT LOOPS */}
-      <ScrollFadeIn>
-        <section>
-          <SectionEyebrow>Current Loops</SectionEyebrow>
-          <div className="space-y-6">
-            {currentLoops.map((item, i) => (
-              <ScrollFadeIn key={item.title} delay={i * 60}>
-                <div>
-                  <p className="text-base font-bold text-primary">{item.title}</p>
-                  <p className="mt-1 text-sm leading-relaxed text-secondary">
-                    {item.text}
-                  </p>
-                </div>
-              </ScrollFadeIn>
-            ))}
-          </div>
-        </section>
-      </ScrollFadeIn>
-
-      <Divider />
-
-      {/* QUOTES */}
-      <ScrollFadeIn>
-        <section>
-          <SectionEyebrow>Quotes to Build By</SectionEyebrow>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {quotes.map((item, i) => (
-              <ScrollFadeIn key={item.quote} delay={i * 50}>
-                <div className="flex h-full flex-col justify-between rounded-lg border border-divider bg-white/30 p-4 transition-colors duration-200 hover:border-primary/20">
-                  <p className="text-sm italic leading-relaxed text-gray-700">
-                    &ldquo;{item.quote}&rdquo;
-                  </p>
-                  <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-secondary">
-                    — {item.author}
-                  </p>
-                </div>
-              </ScrollFadeIn>
-            ))}
-          </div>
-        </section>
-      </ScrollFadeIn>
-
-      <Divider />
-
-      {/* MAIN VENTURE */}
-      <ScrollFadeIn>
-        <section>
-          <SectionEyebrow>Main Venture</SectionEyebrow>
-          <div className="group rounded-xl border border-divider bg-white/30 p-6 sm:p-8 transition-all duration-200 hover:border-primary/20 hover:shadow-sm flex flex-col sm:flex-row gap-6 sm:items-center">
-            <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl border border-divider bg-white p-1 shadow-sm sm:h-28 sm:w-28">
+          </FadeIn>
+          
+          <FadeIn delay={0.2} className="shrink-0">
+            <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-full border border-white/10 p-2 backdrop-blur-sm bg-white/5">
               <Image
-                src="/logoL.jpeg"
-                alt="Leverage"
-                width={112}
-                height={112}
-                className="h-full w-full rounded-lg object-cover"
+                src="/profile.jpg"
+                alt="Hilal Safwan"
+                width={160}
+                height={160}
+                className="rounded-full object-cover h-full w-full grayscale hover:grayscale-0 transition-all duration-700"
+                priority
               />
+              <div className="absolute bottom-0 right-0 h-6 w-6 rounded-full border-4 border-dark-bg bg-green-500" title="Building" />
             </div>
-            <div className="flex-1">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <div>
-                  <h3 className="text-xl font-bold text-primary sm:text-2xl">
-                    Leverage
-                  </h3>
-                  <p className="mt-1 text-sm font-medium text-secondary">
-                    Founder
-                  </p>
+          </FadeIn>
+        </section>
+
+        {/* BENTO GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[300px] gap-6">
+          
+          {/* LEVERAGE (Span 2 cols) */}
+          <FadeIn delay={0.3} className="md:col-span-2 h-full">
+            <a href="https://leverage-one.vercel.app" target="_blank" rel="noopener noreferrer" className="block h-full">
+              <BentoCard glow className="h-full flex flex-col justify-between overflow-hidden group">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="flex justify-between items-start">
+                  <div className="h-16 w-16 rounded-2xl overflow-hidden border border-white/10 p-1 bg-white/5">
+                    <Image src="/logoL.jpeg" alt="Leverage" width={64} height={64} className="rounded-xl h-full w-full object-cover" />
+                  </div>
+                  <div className="flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1 text-xs font-medium text-green-400">
+                    <span className="h-1.5 w-1.5 rounded-full bg-green-400 animate-pulse" /> Live
+                  </div>
                 </div>
-                <StatusBadge status="Live" />
+
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                    Leverage <ArrowUpRight className="w-5 h-5 text-neutral-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                  </h3>
+                  <p className="text-neutral-400">My main business and the engine behind my work. An independent studio dedicated to building, launching, and scaling high-impact internet products under a single umbrella.</p>
+                </div>
+              </BentoCard>
+            </a>
+          </FadeIn>
+
+          {/* AURA READS */}
+          <FadeIn delay={0.4} className="h-full">
+            <a href="https://aurareads-app.vercel.app/" target="_blank" rel="noopener noreferrer" className="block h-full">
+              <BentoCard glow className="h-full flex flex-col justify-between group bg-gradient-to-br from-amber-500/5 to-transparent hover:from-amber-500/10 border-amber-500/10 hover:border-amber-500/30">
+                <div className="flex justify-between items-start">
+                  <div className="p-3 rounded-xl bg-amber-500/20 text-amber-500">
+                    <Sparkles className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-amber-500/80">Product</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                    Aura Reads <ArrowUpRight className="w-4 h-4 text-amber-500/50 group-hover:text-amber-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                  </h3>
+                  <p className="text-sm text-neutral-400 leading-relaxed">Premium book summaries that hit different. David Senra-level insights for books worth explaining.</p>
+                </div>
+              </BentoCard>
+            </a>
+          </FadeIn>
+
+          {/* PHILOSOPHY */}
+          <FadeIn delay={0.5} className="md:col-span-1 h-full">
+            <BentoCard className="h-full flex flex-col justify-between">
+              <div className="p-3 rounded-xl bg-white/5 text-white w-fit mb-6">
+                <Orbit className="w-6 h-6" />
               </div>
-              <p className="mt-4 text-sm leading-relaxed text-gray-700 sm:text-base">
-                My main business and the engine behind my work. An independent studio dedicated to building, launching, and scaling high-impact internet products under a single umbrella.
-              </p>
-              <div className="mt-5">
-                <a
-                  href="https://leverage-one.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group/link inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-opacity hover:opacity-70"
-                >
-                  <span>Visit Website</span>
-                  <ArrowUpRight className="h-4 w-4 opacity-80 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+              <div>
+                <h3 className="text-lg font-bold text-white mb-3">Operating Thesis</h3>
+                <p className="text-sm text-neutral-400 leading-relaxed">
+                  Conjecture, build, ship, learn, error-correct. I believe good ideas are hard to vary. If I can&apos;t clearly explain why it will work, I don&apos;t build it. Once I can, I move fast.
+                </p>
+              </div>
+            </BentoCard>
+          </FadeIn>
+
+          {/* DEV PROJECTS */}
+          <FadeIn delay={0.6} className="md:col-span-2 h-full">
+            <BentoCard className="h-full flex flex-col justify-between">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 rounded-xl bg-white/5 text-white">
+                  <Terminal className="w-6 h-6" />
+                </div>
+                <h3 className="text-lg font-bold text-white">Engineering</h3>
+              </div>
+              
+              <div className="space-y-4">
+                <a href="https://carwash-app-tau.vercel.app/" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                  <div>
+                    <h4 className="font-semibold text-white group-hover:text-blue-400 transition-colors">Car Wash Management System</h4>
+                    <p className="text-xs text-neutral-500 mt-1">Next.js, PostgreSQL, Prisma</p>
+                  </div>
+                  <ArrowUpRight className="w-4 h-4 text-neutral-500 group-hover:text-blue-400 transition-colors" />
+                </a>
+                
+                <a href="https://github.com/hilal953/weather-service" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                  <div>
+                    <h4 className="font-semibold text-white group-hover:text-blue-400 transition-colors">Real-time Weather Service</h4>
+                    <p className="text-xs text-neutral-500 mt-1">Node.js, API, Backend</p>
+                  </div>
+                  <ArrowUpRight className="w-4 h-4 text-neutral-500 group-hover:text-blue-400 transition-colors" />
                 </a>
               </div>
-            </div>
-          </div>
-        </section>
-      </ScrollFadeIn>
+            </BentoCard>
+          </FadeIn>
 
-      <Divider />
-
-      {/* PROJECTS */}
-      <ScrollFadeIn>
-        <section>
-          <SectionEyebrow>Projects</SectionEyebrow>
-          <div className="space-y-4">
-            {projects.map((project, i) => (
-              <ScrollFadeIn key={project.number} delay={i * 100}>
-                <div className="group rounded-lg border border-divider bg-white/30 p-5 transition-all duration-200 hover:border-primary/20 hover:shadow-sm">
-                  <div className="flex items-center justify-between">
-                    <p className="text-xs text-secondary">
-                      {project.number} · {project.tag}
-                    </p>
-                    <StatusBadge status={project.status} />
-                  </div>
-                  <p className="mt-2 text-base font-bold text-primary">
-                    {project.title}
-                  </p>
-                  <p className="mt-1 text-sm text-secondary">
-                    {project.description}
-                  </p>
-                  <div className="mt-3 flex flex-wrap gap-1.5">
-                    {project.stack.map((tech) => (
-                      <span
-                        key={tech}
-                        className="rounded-full bg-primary/5 px-2 py-0.5 text-[10px] font-medium text-secondary"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="mt-4 flex items-center gap-4">
-                    {project.href && (
-                      <a
-                        href={project.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group/link inline-flex items-center gap-1 text-sm font-semibold text-primary transition-opacity hover:opacity-70"
-                      >
-                        <span>Visit</span>
-                        <ArrowUpRight className="h-3.5 w-3.5 opacity-80 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                      </a>
-                    )}
-                    <a
-                      href={project.githubHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group/link inline-flex items-center gap-1 text-sm font-semibold text-secondary transition-opacity hover:opacity-70"
-                    >
-                      <span>GitHub</span>
-                      <ArrowUpRight className="h-3.5 w-3.5 opacity-60 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                    </a>
-                  </div>
+          {/* CURRENT LOOPS */}
+          <FadeIn delay={0.7} className="md:col-span-3">
+            <BentoCard className="flex flex-col md:flex-row gap-8 items-center h-full">
+              <div className="shrink-0 text-center md:text-left md:w-1/3">
+                <div className="inline-flex p-3 rounded-xl bg-white/5 text-white mb-4">
+                  <Zap className="w-6 h-6" />
                 </div>
-              </ScrollFadeIn>
-            ))}
-          </div>
-        </section>
-      </ScrollFadeIn>
+                <h3 className="text-2xl font-bold text-white">Current Loops</h3>
+                <p className="text-neutral-500 mt-2">The mental models guiding my daily execution.</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-full">
+                <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex flex-col justify-center">
+                  <h4 className="text-sm font-semibold text-white mb-1">Explanation-first building</h4>
+                  <p className="text-xs text-neutral-400 leading-relaxed">A good product should feel like a clear explanation turned into software.</p>
+                </div>
+                <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex flex-col justify-center">
+                  <h4 className="text-sm font-semibold text-white mb-1">Small bets, real feedback</h4>
+                  <p className="text-xs text-neutral-400 leading-relaxed">Tiny products make reality answer quickly. Ship, observe, correct, repeat.</p>
+                </div>
+                <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex flex-col justify-center">
+                  <h4 className="text-sm font-semibold text-white mb-1">AI as leverage</h4>
+                  <p className="text-xs text-neutral-400 leading-relaxed">Use AI to move faster, not to outsource taste. Build something sharp.</p>
+                </div>
+                <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex flex-col justify-center">
+                  <h4 className="text-sm font-semibold text-white mb-1">Freedom through usefulness</h4>
+                  <p className="text-xs text-neutral-400 leading-relaxed">Build something valuable enough that strangers pay for it.</p>
+                </div>
+              </div>
+            </BentoCard>
+          </FadeIn>
 
-      <Divider />
-
-      {/* MY STORY */}
-      <ScrollFadeIn>
-        <section>
-          <SectionEyebrow>My Story</SectionEyebrow>
-          <StoryToggle />
-        </section>
-      </ScrollFadeIn>
-
-      <Divider />
-
-      {/* CONNECT */}
-      <ScrollFadeIn>
-        <section>
-          <SectionEyebrow>Connect</SectionEyebrow>
-          <div className="flex flex-wrap gap-x-6 gap-y-2 text-base font-semibold text-primary">
-            <a
-              href="mailto:hilalmohamed100@gmail.com"
-              className="group/link inline-flex items-center gap-1 transition-opacity hover:opacity-70"
-            >
-              <span>Email</span>
-              <ArrowUpRight className="h-4 w-4 opacity-70 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-            </a>
-            <a
-              href="https://x.com/HilalSafwan_30"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group/link inline-flex items-center gap-1 transition-opacity hover:opacity-70"
-            >
-              <span>Twitter / X</span>
-              <ArrowUpRight className="h-4 w-4 opacity-70 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-            </a>
-            <a
-              href="https://github.com/hilal953"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group/link inline-flex items-center gap-1 transition-opacity hover:opacity-70"
-            >
-              <span>GitHub</span>
-              <ArrowUpRight className="h-4 w-4 opacity-70 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-            </a>
-            <a
-              href="https://www.facebook.com/share/1cixwy1To5/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group/link inline-flex items-center gap-1 transition-opacity hover:opacity-70"
-            >
-              <span>Facebook</span>
-              <ArrowUpRight className="h-4 w-4 opacity-70 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-            </a>
-          </div>
-          <p className="mt-8 text-sm text-secondary">
-            Inputs I keep returning to: The Beginning of Infinity · Nassim Taleb
-            · Naval Ravikant · Peter Thiel · Marc Lou · David Senra · Zcash · AI agents · small internet products
-          </p>
-          <p className="mt-12 text-sm text-secondary">
-            © 2026 Hilal Safwan. Still building. Still believing.
-          </p>
-        </section>
-      </ScrollFadeIn>
-    </main>
+        </div>
+      </main>
+    </div>
   );
 }

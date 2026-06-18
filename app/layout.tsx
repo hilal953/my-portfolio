@@ -154,14 +154,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className={`${inter.className} bg-cream text-primary antialiased`}>
+      <body className={`${inter.className} bg-dark-bg text-neutral-100 antialiased selection:bg-neutral-800 selection:text-white`}>
         {children}
       </body>
     </html>
