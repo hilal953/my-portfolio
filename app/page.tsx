@@ -90,7 +90,7 @@ export default function Home() {
               <span className="animate-text-gradient bg-gradient-to-r from-neutral-400 via-neutral-600 to-neutral-400 bg-[length:200%_auto] bg-clip-text text-transparent">Sri Lanka → Internet.</span>
             </p>
             <p className="text-neutral-500 leading-relaxed max-w-lg">
-              I ship things on the internet and believe one of them will work. Focused on high-leverage products, clean code, and extreme polish.
+              I don&apos;t just ship code; I build engines of leverage. I am obsessed with asymmetric bets. Most people play house on the internet, but I am building an empire in the dark, line by line.
             </p>
           </FadeIn>
           
@@ -131,7 +131,7 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-white mb-2 flex items-center gap-2">
                     Leverage <ArrowUpRight className="w-5 h-5 text-neutral-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                   </h3>
-                  <p className="text-neutral-400">My main business and the engine behind my work. An independent studio dedicated to building, launching, and scaling high-impact internet products under a single umbrella.</p>
+                  <p className="text-neutral-400">My main vehicle. An independent studio dedicated to launching internet products that scale. No permission asked. Absolute ownership.</p>
                 </div>
               </BentoCard>
             </a>
@@ -168,7 +168,7 @@ export default function Home() {
               <div>
                 <h3 className="text-lg font-bold text-white mb-3">Operating Thesis</h3>
                 <p className="text-sm text-neutral-400 leading-relaxed">
-                  Conjecture, build, ship, learn, error-correct. I believe good ideas are hard to vary. If I can&apos;t clearly explain why it will work, I don&apos;t build it. Once I can, I move fast.
+                  Obsession is the only strategy that compounds. Conjecture, error-correct, survive. I study the outliers who built the world to focus entirely on making things people actually want. If an idea doesn&apos;t hit the bone, I don&apos;t build it. When it does, I execute relentlessly.
                 </p>
               </div>
             </BentoCard>
@@ -217,20 +217,20 @@ export default function Home() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-full">
                 <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex flex-col justify-center">
-                  <h4 className="text-sm font-semibold text-white mb-1">Explanation-first building</h4>
-                  <p className="text-xs text-neutral-400 leading-relaxed">A good product should feel like a clear explanation turned into software.</p>
+                  <h4 className="text-sm font-semibold text-white mb-1">Clarity is Violence</h4>
+                  <p className="text-xs text-neutral-400 leading-relaxed">If you can&apos;t explain it simply, you don&apos;t understand it. Software is just frozen thought.</p>
                 </div>
                 <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex flex-col justify-center">
-                  <h4 className="text-sm font-semibold text-white mb-1">Small bets, real feedback</h4>
-                  <p className="text-xs text-neutral-400 leading-relaxed">Tiny products make reality answer quickly. Ship, observe, correct, repeat.</p>
+                  <h4 className="text-sm font-semibold text-white mb-1">Reality is the Judge</h4>
+                  <p className="text-xs text-neutral-400 leading-relaxed">Tiny products force reality to answer quickly. Ship, bleed, adapt, repeat.</p>
                 </div>
                 <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex flex-col justify-center">
-                  <h4 className="text-sm font-semibold text-white mb-1">AI as leverage</h4>
-                  <p className="text-xs text-neutral-400 leading-relaxed">Use AI to move faster, not to outsource taste. Build something sharp.</p>
+                  <h4 className="text-sm font-semibold text-white mb-1">Infinite Leverage</h4>
+                  <p className="text-xs text-neutral-400 leading-relaxed">I don&apos;t use AI to outsource taste. I use it to multiply my output by 100x.</p>
                 </div>
                 <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex flex-col justify-center">
-                  <h4 className="text-sm font-semibold text-white mb-1">Freedom through usefulness</h4>
-                  <p className="text-xs text-neutral-400 leading-relaxed">Build something valuable enough that strangers pay for it.</p>
+                  <h4 className="text-sm font-semibold text-white mb-1">Escape Velocity</h4>
+                  <p className="text-xs text-neutral-400 leading-relaxed">Build something so undeniably valuable that strangers are forced to pay for it.</p>
                 </div>
               </div>
             </BentoCard>
