@@ -10,7 +10,7 @@ const FadeIn = ({ children, delay = 0, className = "" }: { children: React.React
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-50px" }}
-    transition={{ duration: 0.7, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
+    transition={{ duration: 0.7, delay, type: "spring", stiffness: 100, damping: 20 }}
     className={className}
   >
     {children}
@@ -18,7 +18,7 @@ const FadeIn = ({ children, delay = 0, className = "" }: { children: React.React
 );
 
 const BentoCard = ({ children, className = "", glow = false }: { children: React.ReactNode; className?: string; glow?: boolean }) => (
-  <div className={`group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md p-6 transition-all duration-500 hover:bg-white/[0.04] hover:border-white/20 ${className}`}>
+  <div className={`group relative overflow-hidden rounded-3xl border border-white/5 bg-white/[0.01] backdrop-blur-xl p-6 transition-all duration-500 hover:bg-white/[0.02] hover:border-white/20 hover:shadow-2xl hover:shadow-white/[0.02] hover:-translate-y-1 ${className}`}>
     {glow && (
       <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-white/5 blur-[80px] transition-all duration-500 group-hover:bg-white/10" />
     )}
@@ -50,8 +50,8 @@ const FloatingDock = () => (
   <motion.div
     initial={{ y: 100, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
-    transition={{ delay: 0.8, duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
-    className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 rounded-full border border-white/10 bg-black/50 backdrop-blur-xl px-6 py-3 shadow-2xl"
+    transition={{ delay: 0.8, duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
+    className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 rounded-full border border-white/5 bg-black/40 backdrop-blur-2xl px-6 py-3 shadow-[0_0_40px_rgba(0,0,0,0.5)]"
   >
     <a href="https://x.com/HilalSafwan_30" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors">
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -68,9 +68,12 @@ const FloatingDock = () => (
 export default function Home() {
   return (
     <div className="min-h-screen bg-dark-bg selection:bg-white/20 text-neutral-200 font-sans relative overflow-x-hidden">
+      {/* Noise Overlay */}
+      <div className="bg-noise" />
+
       {/* Background Glows */}
-      <div className="fixed top-[-20%] left-[-10%] h-[50vw] w-[50vw] rounded-full bg-white/[0.02] blur-[120px] pointer-events-none" />
-      <div className="fixed bottom-[-20%] right-[-10%] h-[50vw] w-[50vw] rounded-full bg-amber-500/[0.02] blur-[120px] pointer-events-none" />
+      <div className="fixed top-[-20%] left-[-10%] h-[50vw] w-[50vw] rounded-full bg-white/[0.02] blur-[120px] pointer-events-none animate-pulse-slow" />
+      <div className="fixed bottom-[-20%] right-[-10%] h-[50vw] w-[50vw] rounded-full bg-amber-500/[0.02] blur-[120px] pointer-events-none animate-pulse-slow" style={{ animationDelay: '4s' }} />
 
       <FloatingDock />
 
@@ -79,12 +82,12 @@ export default function Home() {
         {/* HERO SECTION */}
         <section className="mb-24 mt-12 flex flex-col md:flex-row md:items-end justify-between gap-12">
           <FadeIn className="max-w-2xl">
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-tight animate-text-gradient bg-gradient-to-r from-neutral-100 via-neutral-500 to-neutral-100 bg-[length:200%_auto] bg-clip-text text-transparent">
               Hilal Safwan
             </h1>
             <p className="text-xl md:text-2xl font-medium text-neutral-400 mb-4 tracking-tight">
               Builder. Vibe Coder. Optimist. <br />
-              <span className="text-neutral-500">Sri Lanka → Internet.</span>
+              <span className="animate-text-gradient bg-gradient-to-r from-neutral-400 via-neutral-600 to-neutral-400 bg-[length:200%_auto] bg-clip-text text-transparent">Sri Lanka → Internet.</span>
             </p>
             <p className="text-neutral-500 leading-relaxed max-w-lg">
               I ship things on the internet and believe one of them will work. Focused on high-leverage products, clean code, and extreme polish.
@@ -92,13 +95,13 @@ export default function Home() {
           </FadeIn>
           
           <FadeIn delay={0.2} className="shrink-0">
-            <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-full border border-white/10 p-2 backdrop-blur-sm bg-white/5">
+            <div className="group relative h-32 w-32 md:h-40 md:w-40 rounded-full border border-white/10 p-2 backdrop-blur-sm bg-white/5 hover:scale-105 transition-transform duration-500">
               <Image
                 src="/profile.jpg"
                 alt="Hilal Safwan"
                 width={160}
                 height={160}
-                className="rounded-full object-cover h-full w-full grayscale hover:grayscale-0 transition-all duration-700"
+                className="rounded-full object-cover h-full w-full grayscale group-hover:grayscale-0 transition-all duration-700"
                 priority
               />
               <div className="absolute bottom-0 right-0 h-6 w-6 rounded-full border-4 border-dark-bg bg-green-500" title="Building" />
@@ -136,7 +139,7 @@ export default function Home() {
 
           {/* AURA READS */}
           <FadeIn delay={0.4} className="h-full">
-            <a href="https://aurareads-app.vercel.app/" target="_blank" rel="noopener noreferrer" className="block h-full">
+            <a href="https://aurareads.xyz" target="_blank" rel="noopener noreferrer" className="block h-full">
               <BentoCard glow className="h-full flex flex-col justify-between group bg-gradient-to-br from-amber-500/5 to-transparent hover:from-amber-500/10 border-amber-500/10 hover:border-amber-500/30">
                 <div className="flex justify-between items-start">
                   <div className="p-3 rounded-xl bg-amber-500/20 text-amber-500">
