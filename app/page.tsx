@@ -131,7 +131,7 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-white mb-2 flex items-center gap-2">
                     Leverage <ArrowUpRight className="w-5 h-5 text-neutral-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                   </h3>
-                  <p className="text-neutral-400">My main vehicle. An independent studio dedicated to launching internet products that scale. No permission asked. Absolute ownership.</p>
+                  <p className="text-neutral-400">The holding company. I don&apos;t build features; I build assets. Absolute ownership. Zero permission asked.</p>
                 </div>
               </BentoCard>
             </a>
@@ -152,7 +152,7 @@ export default function Home() {
                     Aura Reads <ArrowUpRight className="w-4 h-4 text-amber-500/50 group-hover:text-amber-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                   </h3>
                   <p className="text-sm text-neutral-400 leading-relaxed">
-                    Premium book summaries that hit different. High-signal insights for books worth reading.
+                    High-signal founder notes. We extract the marrow from the only books worth reading. Pure leverage.
                   </p>
                 </div>
               </BentoCard>
@@ -249,15 +249,15 @@ export default function Home() {
                 Nothing screams obsession like showing your scars. These are the failed bets that paid my tuition in reality.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="p-5 rounded-2xl bg-white/[0.01] border border-white/5 transition-all duration-300 hover:border-white/20">
-                  <h4 className="text-base font-semibold text-neutral-500 mb-2 line-through">Echo Reader</h4>
-                  <p className="text-xs text-neutral-400 leading-relaxed mb-3">An RSS reader that nobody asked for. Built for weeks without talking to a single user.</p>
-                  <p className="text-xs font-medium text-amber-500"><span className="text-white">Brutal Lesson:</span> Build what people already crave, not what you think they should want.</p>
+                <div className="p-5 rounded-2xl bg-white/[0.01] border border-white/5 transition-all duration-300 hover:border-white/20 hover:bg-white/[0.02]">
+                  <h4 className="text-base font-semibold text-neutral-500 mb-2 line-through">Futsal Booking App</h4>
+                  <p className="text-xs text-neutral-400 leading-relaxed mb-3">Spent weeks writing code for a complex system before confirming if anyone actually wanted to use it.</p>
+                  <p className="text-xs font-medium text-neutral-400"><span className="text-white font-semibold">The Scar:</span> Build what people already crave, not what you assume they need.</p>
                 </div>
-                <div className="p-5 rounded-2xl bg-white/[0.01] border border-white/5 transition-all duration-300 hover:border-white/20">
+                <div className="p-5 rounded-2xl bg-white/[0.01] border border-white/5 transition-all duration-300 hover:border-white/20 hover:bg-white/[0.02]">
                   <h4 className="text-base font-semibold text-neutral-500 mb-2 line-through">FlowTask</h4>
-                  <p className="text-xs text-neutral-400 leading-relaxed mb-3">A productivity tool entering a market with 10,000 competitors and zero differentiation.</p>
-                  <p className="text-xs font-medium text-amber-500"><span className="text-white">Brutal Lesson:</span> If your product can be cloned in a weekend, you have no moat.</p>
+                  <p className="text-xs text-neutral-400 leading-relaxed mb-3">A productivity tool entering a market with 10,000 competitors and absolutely zero differentiation.</p>
+                  <p className="text-xs font-medium text-neutral-400"><span className="text-white font-semibold">The Scar:</span> If your product can be cloned in a weekend, you have no moat.</p>
                 </div>
               </div>
             </BentoCard>
