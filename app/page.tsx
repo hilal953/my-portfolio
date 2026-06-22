@@ -311,6 +311,41 @@ export default function Home() {
             </BentoCard>
           </FadeIn>
 
+          {/* IN THE TRENCHES / CHANGELOG */}
+          <FadeIn delay={0.95} className="md:col-span-3">
+            <BentoCard>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 rounded-xl bg-white/5 text-white">
+                  <Terminal className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-white">In the Trenches</h3>
+              </div>
+              <div className="space-y-5">
+                <div className="flex items-start gap-4">
+                  <span className="text-xs font-mono text-neutral-500 mt-1 w-16 shrink-0">Today</span>
+                  <div>
+                    <p className="text-sm text-white font-medium">Portfolio Architecture</p>
+                    <p className="text-xs text-neutral-400 mt-1 leading-relaxed">Ripped out the old UI. Shipped new bento grid, global noise textures, and founder-mode copywriting.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <span className="text-xs font-mono text-neutral-500 mt-1 w-16 shrink-0">Recent</span>
+                  <div>
+                    <p className="text-sm text-white font-medium">Aura Reads V2</p>
+                    <p className="text-xs text-neutral-400 mt-1 leading-relaxed">Moved to custom domain aurareads.xyz. Upgraded the core reading experience for absolute focus.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <span className="text-xs font-mono text-neutral-500 mt-1 w-16 shrink-0">Earlier</span>
+                  <div>
+                    <p className="text-sm text-white font-medium">Killed FlowTask</p>
+                    <p className="text-xs text-neutral-400 mt-1 leading-relaxed">Shut down the servers. Wrote the post-mortem. Escaped a saturated market to focus on high-leverage bets.</p>
+                  </div>
+                </div>
+              </div>
+            </BentoCard>
+          </FadeIn>
+
           {/* MY STORY */}
           <FadeIn delay={1.0} className="md:col-span-3">
             <BentoCard>
@@ -328,18 +363,29 @@ export default function Home() {
 
         </div>
 
-        {/* FOOTER */}
+        {/* FOOTER & DIRECT CONTACT */}
         <FadeIn delay={1.1}>
-          <footer className="mt-32 border-t border-white/10 pt-12 pb-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-neutral-500 text-sm">
-              © {new Date().getFullYear()} Hilal Safwan. Still building. Still believing.
-            </p>
-            <div className="flex gap-6 text-sm text-neutral-500">
-              <a href="https://x.com/HilalSafwan_30" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Twitter</a>
-              <a href="https://github.com/hilal953" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a>
-              <a href="https://www.linkedin.com/in/hilal-safwan" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+          <div className="mt-32 border-t border-white/10 pt-16 pb-8">
+            <div className="flex flex-col items-center justify-center text-center mb-20 px-4">
+              <p className="text-white font-bold text-lg mb-3 flex items-center justify-center gap-2">
+                <Mail className="w-5 h-5 text-neutral-400" />
+                The Direct Contact Promise
+              </p>
+              <p className="text-neutral-400 text-sm max-w-md mx-auto leading-relaxed">
+                If you email me, you get me. I don&apos;t use virtual assistants or support desks. I do my own customer support, I write my own copy, and I ship my own code.
+              </p>
             </div>
-          </footer>
+            <footer className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <p className="text-neutral-500 text-sm">
+                © {new Date().getFullYear()} Hilal Safwan. Designed, coded, and obsessed over in Founder Mode.
+              </p>
+              <div className="flex gap-6 text-sm text-neutral-500">
+                <a href="https://x.com/HilalSafwan_30" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Twitter</a>
+                <a href="https://github.com/hilal953" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/hilal-safwan" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+              </div>
+            </footer>
+          </div>
         </FadeIn>
       </main>
     </div>
