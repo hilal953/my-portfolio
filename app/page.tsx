@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, Terminal, Sparkles, Orbit, Zap, Quote, Code2, BookOpen } from "lucide-react";
+import { ArrowUpRight, Mail, Terminal, Sparkles, Orbit, Zap, Quote, Code2, BookOpen, Skull } from "lucide-react";
 import StoryToggle from "@/components/StoryToggle";
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
@@ -41,9 +41,9 @@ const quotes = [
 ];
 
 const skillCategories = [
-  { label: "Languages", skills: ["JavaScript", "TypeScript", "Python", "Java"] },
-  { label: "Stack", skills: ["Next.js", "React", "Node.js", "PostgreSQL", "Prisma", "Tailwind CSS"] },
-  { label: "Interests", skills: ["Zcash", "Crypto", "Digital Products", "SaaS", "AI Agents", "MCP"] },
+  { label: "Execution", skills: ["Rapid Prototyping", "Systems Design", "Go-To-Market", "AI Automation"] },
+  { label: "Leverage", skills: ["Full-Stack Architecture", "Next.js", "React", "PostgreSQL", "Tailwind CSS"] },
+  { label: "Obsessions", skills: ["Digital Products", "SaaS", "Asymmetric Bets", "AI Agents", "Crypto"] },
 ];
 
 const FloatingDock = () => (
@@ -236,6 +236,33 @@ export default function Home() {
             </BentoCard>
           </FadeIn>
 
+          {/* THE GRAVEYARD */}
+          <FadeIn delay={0.75} className="md:col-span-3">
+            <BentoCard>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 rounded-xl bg-white/5 text-white">
+                  <Skull className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-white">The Graveyard</h3>
+              </div>
+              <p className="text-neutral-400 mb-6 text-sm">
+                Nothing screams obsession like showing your scars. These are the failed bets that paid my tuition in reality.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-5 rounded-2xl bg-white/[0.01] border border-white/5 transition-all duration-300 hover:border-white/20">
+                  <h4 className="text-base font-semibold text-neutral-500 mb-2 line-through">Echo Reader</h4>
+                  <p className="text-xs text-neutral-400 leading-relaxed mb-3">An RSS reader that nobody asked for. Built for weeks without talking to a single user.</p>
+                  <p className="text-xs font-medium text-amber-500"><span className="text-white">Brutal Lesson:</span> Build what people already crave, not what you think they should want.</p>
+                </div>
+                <div className="p-5 rounded-2xl bg-white/[0.01] border border-white/5 transition-all duration-300 hover:border-white/20">
+                  <h4 className="text-base font-semibold text-neutral-500 mb-2 line-through">FlowTask</h4>
+                  <p className="text-xs text-neutral-400 leading-relaxed mb-3">A productivity tool entering a market with 10,000 competitors and zero differentiation.</p>
+                  <p className="text-xs font-medium text-amber-500"><span className="text-white">Brutal Lesson:</span> If your product can be cloned in a weekend, you have no moat.</p>
+                </div>
+              </div>
+            </BentoCard>
+          </FadeIn>
+
           {/* SKILLS */}
           <FadeIn delay={0.8} className="md:col-span-3">
             <BentoCard>
@@ -243,7 +270,7 @@ export default function Home() {
                 <div className="p-3 rounded-xl bg-white/5 text-white">
                   <Code2 className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-white">Technical Arsenal</h3>
+                <h3 className="text-xl font-bold text-white">Weapons of Choice</h3>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {skillCategories.map((category) => (
