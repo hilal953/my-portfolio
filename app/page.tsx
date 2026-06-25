@@ -87,7 +87,7 @@ export default function Home() {
               <span className="text-neutral-500">Sri Lanka → Internet.</span>
             </p>
             <p className="text-neutral-600 leading-relaxed max-w-lg text-lg font-medium">
-              I don&apos;t just ship code; I build engines of leverage. I am obsessed with asymmetric bets. Most people play house on the internet, but I am building an empire in the dark, line by line.
+              I build and scale internet businesses. Obsessed with clean design, fast iteration, and making things people actually want to use.
             </p>
           </FadeIn>
           
@@ -126,7 +126,7 @@ export default function Home() {
                   <h3 className="text-3xl font-bold text-primary mb-2 flex items-center gap-2">
                     Leverage <ArrowUpRight className="w-6 h-6 text-neutral-400 group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                   </h3>
-                  <p className="text-neutral-600 text-lg font-medium">The holding company. I don&apos;t build features; I build assets. Absolute ownership. Zero permission asked.</p>
+                  <p className="text-neutral-600 text-lg font-medium">My holding company for internet assets. Independent, bootstrapped, and highly leveraged.</p>
                 </div>
               </BentoCard>
             </a>
@@ -147,7 +147,7 @@ export default function Home() {
                     Aura Reads <ArrowUpRight className="w-5 h-5 text-amber-500/50 group-hover:text-amber-600 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                   </h3>
                   <p className="text-base text-neutral-600 font-medium leading-relaxed">
-                    High-signal founder notes. We extract the marrow from the only books worth reading. Pure leverage.
+                    High-signal summaries of the best books for founders and builders.
                   </p>
                 </div>
               </BentoCard>
