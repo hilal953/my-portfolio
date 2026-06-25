@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import { siteConfig, siteUrl } from "@/lib/site";
 import "./globals.css";
 
-
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -12,7 +11,7 @@ const inter = Inter({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#FAFAFA",
+  themeColor: "#f5f2eb",
 };
 
 export const metadata: Metadata = {
@@ -154,7 +153,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className={`${inter.className} bg-light-bg text-black antialiased selection:bg-neutral-800 selection:text-white`}>
+      <body className={`${inter.className} bg-cream text-primary antialiased selection:bg-neutral-800 selection:text-white`}>
         {children}
       </body>
     </html>

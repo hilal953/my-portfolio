@@ -13,9 +13,7 @@ const config: Config = {
         primary: "#1a1a1a",
         secondary: "#6b6b6b",
         divider: "#e0dcd4",
-        "light-bg": "#fafafa",
-        "light-surface": "#ffffff",
-        "light-border": "#0000001a",
+        "glass-white": "rgba(255, 255, 255, 0.5)",
       },
       animation: {
         "text-gradient": "text-gradient 8s linear infinite",
