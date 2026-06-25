@@ -87,7 +87,7 @@ export default function Home() {
               <span className="text-neutral-500">Sri Lanka → Internet.</span>
             </p>
             <p className="text-neutral-600 leading-relaxed max-w-lg text-lg font-medium">
-              I build and scale internet businesses. Obsessed with clean design, fast iteration, and making things people actually want to use.
+              I don&apos;t just ship code; I build engines of leverage. I am obsessed with asymmetric bets. Most people play house on the internet, but I am building an empire in the dark, line by line.
             </p>
           </FadeIn>
           
@@ -126,7 +126,7 @@ export default function Home() {
                   <h3 className="text-3xl font-bold text-primary mb-2 flex items-center gap-2">
                     Leverage <ArrowUpRight className="w-6 h-6 text-neutral-400 group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                   </h3>
-                  <p className="text-neutral-600 text-lg font-medium">My holding company for internet assets. Independent, bootstrapped, and highly leveraged.</p>
+                  <p className="text-neutral-600 text-lg font-medium">This is the holding company where I build high-leverage internet products. I will be launching many bets here, and one of them will be a highly scalable, hard-to-vary product.</p>
                 </div>
               </BentoCard>
             </a>
@@ -249,18 +249,9 @@ export default function Home() {
 
         </div>
 
-        {/* FOOTER & DIRECT CONTACT */}
+        {/* FOOTER */}
         <FadeIn delay={0.9}>
-          <div className="mt-32 border-t border-black/5 pt-16 pb-8">
-            <div className="flex flex-col items-center justify-center text-center mb-20 px-4">
-              <p className="text-primary font-bold text-xl mb-4 flex items-center justify-center gap-2">
-                <Mail className="w-6 h-6 text-neutral-400" />
-                The Direct Contact Promise
-              </p>
-              <p className="text-neutral-600 text-base font-medium max-w-lg mx-auto leading-relaxed">
-                If you email me, you get me. I don&apos;t use virtual assistants or support desks. I do my own customer support, I write my own copy, and I ship my own code.
-              </p>
-            </div>
+          <div className="mt-32 border-t border-black/5 pt-12 pb-8">
             <footer className="flex flex-col md:flex-row items-center justify-between gap-6">
               <p className="text-neutral-500 text-sm font-medium">
                 © {new Date().getFullYear()} Hilal Safwan. Designed, coded, and obsessed over in Founder Mode.
