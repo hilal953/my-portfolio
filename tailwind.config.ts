@@ -13,9 +13,9 @@ const config: Config = {
         primary: "#1a1a1a",
         secondary: "#6b6b6b",
         divider: "#e0dcd4",
-        "dark-bg": "#0a0a0a",
-        "dark-surface": "#121212",
-        "dark-border": "#ffffff1a",
+        "light-bg": "#fafafa",
+        "light-surface": "#ffffff",
+        "light-border": "#0000001a",
       },
       animation: {
         "text-gradient": "text-gradient 8s linear infinite",
