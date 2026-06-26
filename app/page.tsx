@@ -138,36 +138,13 @@ export default function Home() {
         <section className="mb-32">
           <FadeIn delay={0.2}>
             <h2 className="text-sm font-bold uppercase tracking-widest text-neutral-400 mb-8 pb-4 border-b border-black/5">Skills</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-              <div className="p-6 border border-black/5 rounded-3xl bg-white/40 hover:bg-white/60 transition-all duration-300 shadow-sm hover:shadow-md">
-                <p className="font-bold mb-4 text-neutral-700 tracking-tight">Engineering Leverage</p>
-                <div className="flex flex-wrap gap-2">
-                  {["Next.js / React", "PostgreSQL Arch", "Systems Design", "AI Integrations", "Full-Stack Dev"].map((skill) => (
-                    <span key={skill} className="px-4 py-2 text-xs font-semibold border border-black/5 rounded-full text-neutral-600 bg-white/60 hover:bg-white transition-colors cursor-default shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="p-6 border border-black/5 rounded-3xl bg-white/40 hover:bg-white/60 transition-all duration-300 shadow-sm hover:shadow-md">
-                <p className="font-bold mb-4 text-neutral-700 tracking-tight">Product & GTM</p>
-                <div className="flex flex-wrap gap-2">
-                  {["Rapid Prototyping", "UX Engineering", "Go-To-Market", "Product-Led Growth", "SaaS Mechanics"].map((skill) => (
-                    <span key={skill} className="px-4 py-2 text-xs font-semibold border border-black/5 rounded-full text-neutral-600 bg-white/60 hover:bg-white transition-colors cursor-default shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="p-6 border border-black/5 rounded-3xl bg-white/40 hover:bg-white/60 transition-all duration-300 shadow-sm hover:shadow-md">
-                <p className="font-bold mb-4 text-neutral-700 tracking-tight">Founder & Capital</p>
-                <div className="flex flex-wrap gap-2">
-                  {["Asymmetric Bets", "Resource Allocation", "Holding Co Mechanics", "Audience Building"].map((skill) => (
-                    <span key={skill} className="px-4 py-2 text-xs font-semibold border border-black/5 rounded-full text-neutral-600 bg-white/60 hover:bg-white transition-colors cursor-default shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+            <div className="p-8 border border-black/5 rounded-3xl bg-white/40 hover:bg-white/60 transition-all duration-300 shadow-sm hover:shadow-md">
+              <div className="flex flex-wrap gap-3">
+                {["HTML", "CSS", "JavaScript", "TypeScript", "Python", "React", "Next.js", "PostgreSQL", "Vercel", "Build in Public", "Shitposting"].map((skill) => (
+                  <span key={skill} className="px-5 py-2.5 text-sm font-semibold border border-black/5 rounded-full text-neutral-700 bg-white/60 hover:bg-white hover:border-black/10 transition-all cursor-default shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
           </FadeIn>
