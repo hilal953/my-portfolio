@@ -39,12 +39,11 @@ export default function Home() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-6 md:px-12 backdrop-blur-md bg-[#f5f2eb]/80 border-b border-black/5"
       >
-        <div className="flex items-center gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-8 h-8 rounded-lg shadow-sm">
+        <div className="flex items-center gap-3 cursor-pointer group">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-8 h-8 rounded-lg shadow-sm group-hover:scale-105 transition-transform duration-300">
             <rect width="32" height="32" rx="8" fill="#0a0a0a" stroke="#ffffff" strokeWidth="1" strokeOpacity="0.2"/>
             <text x="16" y="22" textAnchor="middle" fontFamily="system-ui, sans-serif" fontSize="16" fontWeight="800" fill="#ffffff" letterSpacing="-1">HS</text>
           </svg>
-          <span className="font-bold tracking-tight text-lg">H.S.</span>
         </div>
         <div className="flex items-center gap-6 text-sm font-semibold">
           <a href="https://x.com/HilalSafwan_30" target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-black transition-colors">Twitter</a>
@@ -140,31 +139,31 @@ export default function Home() {
           <FadeIn delay={0.2}>
             <h2 className="text-sm font-bold uppercase tracking-widest text-neutral-400 mb-8 pb-4 border-b border-black/5">Skills</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-              <div className="p-6 border border-black/5 rounded-3xl bg-white/30 hover:bg-white/50 transition-all shadow-sm">
-                <p className="font-bold mb-4 text-neutral-800">Execution</p>
+              <div className="p-6 border border-black/5 rounded-3xl bg-white/40 hover:bg-white/60 transition-all duration-300 shadow-sm hover:shadow-md">
+                <p className="font-bold mb-4 text-neutral-700 tracking-tight">Engineering Leverage</p>
                 <div className="flex flex-wrap gap-2">
-                  {["Rapid Prototyping", "Systems Design", "Go-To-Market", "AI Automation"].map((skill) => (
-                    <span key={skill} className="px-3 py-1.5 text-sm font-medium border border-black/10 rounded-full text-neutral-600 bg-white/50 shadow-sm">
+                  {["Next.js / React", "PostgreSQL Arch", "Systems Design", "AI Integrations", "Full-Stack Dev"].map((skill) => (
+                    <span key={skill} className="px-4 py-2 text-xs font-semibold border border-black/5 rounded-full text-neutral-600 bg-white/60 hover:bg-white transition-colors cursor-default shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
                       {skill}
                     </span>
                   ))}
                 </div>
               </div>
-              <div className="p-6 border border-black/5 rounded-3xl bg-white/30 hover:bg-white/50 transition-all shadow-sm">
-                <p className="font-bold mb-4 text-neutral-800">Leverage</p>
+              <div className="p-6 border border-black/5 rounded-3xl bg-white/40 hover:bg-white/60 transition-all duration-300 shadow-sm hover:shadow-md">
+                <p className="font-bold mb-4 text-neutral-700 tracking-tight">Product & GTM</p>
                 <div className="flex flex-wrap gap-2">
-                  {["Full-Stack Arch", "Next.js / React", "PostgreSQL", "Tailwind CSS"].map((skill) => (
-                    <span key={skill} className="px-3 py-1.5 text-sm font-medium border border-black/10 rounded-full text-neutral-600 bg-white/50 shadow-sm">
+                  {["Rapid Prototyping", "UX Engineering", "Go-To-Market", "Product-Led Growth", "SaaS Mechanics"].map((skill) => (
+                    <span key={skill} className="px-4 py-2 text-xs font-semibold border border-black/5 rounded-full text-neutral-600 bg-white/60 hover:bg-white transition-colors cursor-default shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
                       {skill}
                     </span>
                   ))}
                 </div>
               </div>
-              <div className="p-6 border border-black/5 rounded-3xl bg-white/30 hover:bg-white/50 transition-all shadow-sm">
-                <p className="font-bold mb-4 text-neutral-800">Obsessions</p>
+              <div className="p-6 border border-black/5 rounded-3xl bg-white/40 hover:bg-white/60 transition-all duration-300 shadow-sm hover:shadow-md">
+                <p className="font-bold mb-4 text-neutral-700 tracking-tight">Founder & Capital</p>
                 <div className="flex flex-wrap gap-2">
-                  {["Digital Products", "SaaS", "Asymmetric Bets", "AI Agents"].map((skill) => (
-                    <span key={skill} className="px-3 py-1.5 text-sm font-medium border border-black/10 rounded-full text-neutral-600 bg-white/50 shadow-sm">
+                  {["Asymmetric Bets", "Resource Allocation", "Holding Co Mechanics", "Audience Building"].map((skill) => (
+                    <span key={skill} className="px-4 py-2 text-xs font-semibold border border-black/5 rounded-full text-neutral-600 bg-white/60 hover:bg-white transition-colors cursor-default shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
                       {skill}
                     </span>
                   ))}
