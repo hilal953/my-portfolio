@@ -46,10 +46,10 @@ export default function StoryToggle() {
           {!isLong ? (
             <div className="space-y-6 text-lg md:text-xl font-medium leading-relaxed text-neutral-700">
               <p>
-                I am a builder from Sri Lanka who realized early on that the traditional system is rigged for the average. I didn&apos;t want average; I wanted leverage. I learned to code because software is the ultimate permissionless lever.
+                I am a builder from Sri Lanka. I realized early on that the traditional path of a standard career wasn&apos;t for me. I learned to code because I wanted the freedom to build things on my own terms.
               </p>
               <p>
-                Now, I optimize purely for brutal iteration and absolute ownership of my time. I don&apos;t build for resumes; I build to win.
+                Now, I focus on creating real value and keeping absolute ownership of my time. I don&apos;t build to polish a resume; I build because I genuinely love making ideas come to life.
               </p>
             </div>
           ) : (
