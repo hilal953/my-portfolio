@@ -75,7 +75,7 @@ export default function Home() {
             </div>
             
             <p className="text-xl md:text-2xl text-neutral-800 font-medium leading-relaxed tracking-tight">
-              I don&apos;t just ship code; I build engines of leverage. I am obsessed with asymmetric bets. Most people play house on the internet, but I am building an empire in the dark, line by line.
+              I build software that creates leverage. I am an independent founder, engineer, and the creator of Aura Reads. I reject the traditional career path to build scalable internet businesses, and I am laying the groundwork to lead a next-level tech company.
             </p>
           </FadeIn>
         </section>
@@ -95,7 +95,7 @@ export default function Home() {
                   <span className="text-xs font-semibold text-green-600 bg-green-500/10 px-2 py-1 rounded-full uppercase tracking-wider">Live</span>
                 </div>
                 <p className="text-neutral-600 text-lg leading-relaxed">
-                  This is the holding company where I build high-leverage internet products. I will be launching many bets here, and one of them will be a highly scalable, hard-to-vary product.
+                  My holding company. I use this to launch and scale my internet businesses.
                 </p>
               </a>
 
@@ -108,7 +108,7 @@ export default function Home() {
                   <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider bg-black/5 px-2 py-1 rounded-full">Product</span>
                 </div>
                 <p className="text-neutral-600 text-lg leading-relaxed">
-                  High-signal summaries of the best books for founders and builders.
+                  Book summaries for founders and builders. This is my proof of execution.
                 </p>
               </a>
 
