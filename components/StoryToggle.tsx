@@ -60,8 +60,9 @@ export default function StoryToggle() {
                   2010 - 2017<br/>A New Direction
                 </span>
                 <div className="space-y-4">
-                  <p>I always thought I was going to be a doctor. I studied Biology and did everything I was supposed to do. But in the end, it didn&apos;t work out.</p>
-                  <p>At the time, I felt like a failure. But looking back, that rejection was exactly what I needed. It forced me to stop living someone else&apos;s plan and start figuring out what I actually wanted.</p>
+                  <p>I grew up believing I was supposed to be a doctor. I studied Biology, trying to follow the exact path everyone told me was right.</p>
+                  <p className="font-bold text-black">But in the end, it didn&apos;t work out.</p>
+                  <p>Looking back, that rejection was exactly what I needed. It forced me to stop living someone else&apos;s plan and start figuring out what I actually wanted.</p>
                 </div>
               </div>
 
@@ -70,8 +71,9 @@ export default function StoryToggle() {
                   2017 - 2020<br/>The Search
                 </span>
                 <div className="space-y-4">
-                  <p>I switched to Computer Science, hoping to find my place. But college still felt like I was just memorizing things to pass tests. I felt out of place and a bit lost.</p>
-                  <p>So, I started learning on my own. I read books and studied people who built things from nothing. That&apos;s when I realized that true learning comes from curiosity, not just a classroom.</p>
+                  <p>I switched to Computer Science, hoping to find my place. But college still felt like I was just memorizing things to pass tests. To the outside world, I probably looked a bit lost.</p>
+                  <p className="italic text-neutral-500">But quietly, I was learning on my own.</p>
+                  <p>I stopped worrying about the syllabus and started studying people who had forged their own unique paths. I realized that the most valuable education happens when you simply follow your curiosity.</p>
                 </div>
               </div>
 
@@ -80,8 +82,8 @@ export default function StoryToggle() {
                   2020 - 2023<br/>Finding My Path
                 </span>
                 <div className="space-y-4">
-                  <p>While my classmates were polishing their resumes, I was trying to learn how to build real products. It was a lonely time until I found some amazing communities online.</p>
-                  <p>I saw regular people with just a laptop bringing incredible ideas to life. They showed me that you don&apos;t need a massive company or anyone&apos;s permission to create something meaningful.</p>
+                  <p>While my classmates were polishing their resumes, I was trying to figure out how to build real products. It was a lonely time, but I had to make it work. <span className="font-bold text-black italic">The determination</span> was already there.</p>
+                  <p>Then I found some amazing communities online. I saw regular people with just a laptop bringing incredible ideas to life. They showed me that you don&apos;t need permission to create something meaningful.</p>
                 </div>
               </div>
 
@@ -90,7 +92,7 @@ export default function StoryToggle() {
                   Present<br/>Just Build
                 </span>
                 <div className="space-y-4">
-                  <p>Now, my philosophy is simple: I make things, share them with the world, and listen to what happens next. Not everything works, and that&apos;s perfectly fine.</p>
+                  <p>Now, my philosophy is simple: I make things, share them with the world, and listen to what happens next. I don&apos;t try to perfectly predict what people want.</p>
                   <p>Every mistake teaches me something new. It might seem a bit unstructured to some, but to me, it&apos;s the most honest way to live and work.</p>
                 </div>
               </div>
@@ -100,14 +102,13 @@ export default function StoryToggle() {
                   What Matters
                 </span>
                 <div className="space-y-4">
-                  <p>Money is important, but for me, it&apos;s really just a way to earn the freedom to spend my time how I choose. When things get complicated, I try to remember a few simple things:</p>
-                  <ul className="list-disc pl-5 space-y-2 text-neutral-600">
-                    <li>It&apos;s a good thing to care deeply about what you make.</li>
-                    <li>If you don&apos;t fit into the normal path, you can always build your own.</li>
-                    <li>Keep trying, keep learning, and don&apos;t give up.</li>
-                  </ul>
+                  <p>Money is important, but for me, it&apos;s really just a way to earn the freedom to spend my time how I choose.</p>
+                  <p>When things get complicated, I try to remember that it&apos;s a good thing to care deeply about what you make. If you don&apos;t fit into the normal path, you can always build your own.</p>
+                  <blockquote className="pl-5 border-l-2 border-black/20 italic text-neutral-600 my-6">
+                    &quot;Keep trying, keep learning, and never give up. At the end of the day, I just want to spend my life building things I love.&quot;
+                  </blockquote>
                   <p className="text-xl font-bold tracking-tight text-black mt-8">
-                    At the end of the day, I just want to spend my life building things I love.
+                    This is my journey. And I&apos;m just getting started.
                   </p>
                 </div>
               </div>
