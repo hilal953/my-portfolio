@@ -57,58 +57,57 @@ export default function StoryToggle() {
               
               <div className="grid grid-cols-1 md:grid-cols-[150px_1fr] gap-6">
                 <span className="text-xs font-bold uppercase tracking-widest text-neutral-400 mt-2">
-                  2010 - 2017<br/>The Rejection
+                  2010 - 2017<br/>A New Direction
                 </span>
                 <div className="space-y-4">
-                  <p>I was supposed to be a doctor. I studied Biology and tried to follow the script. I thought the path was set.</p>
-                  <p className="font-bold text-black">But the system rejected me.</p>
-                  <p>It was the greatest gift I ever received. It forced me off the conveyor belt and into the wilderness. I realized that a standard career is just a safe way to slowly die. I didn&apos;t want safety; I wanted freedom.</p>
+                  <p>I always thought I was going to be a doctor. I studied Biology and did everything I was supposed to do. But in the end, it didn&apos;t work out.</p>
+                  <p>At the time, I felt like a failure. But looking back, that rejection was exactly what I needed. It forced me to stop living someone else&apos;s plan and start figuring out what I actually wanted.</p>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-[150px_1fr] gap-6">
                 <span className="text-xs font-bold uppercase tracking-widest text-neutral-400 mt-2">
-                  2017 - 2020<br/>The Matrix
+                  2017 - 2020<br/>The Search
                 </span>
                 <div className="space-y-4">
-                  <p>I started studying Computer Science, but college was just another rigid system. I didn&apos;t fit in. I felt entirely misunderstood. To the outside world, I looked lost.</p>
-                  <p className="italic text-neutral-500">But in the dark, I was building my mental models.</p>
-                  <p>I stopped paying attention to the syllabus and started studying the outliers. I consumed books and movies obsessively. I was looking for the secret to leverage. The degree was just a piece of paper; the real education was happening in isolation.</p>
+                  <p>I switched to Computer Science, hoping to find my place. But college still felt like I was just memorizing things to pass tests. I felt out of place and a bit lost.</p>
+                  <p>So, I started learning on my own. I read books and studied people who built things from nothing. That&apos;s when I realized that true learning comes from curiosity, not just a classroom.</p>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-[150px_1fr] gap-6">
                 <span className="text-xs font-bold uppercase tracking-widest text-neutral-400 mt-2">
-                  2020 - 2023<br/>The Obsession
+                  2020 - 2023<br/>Finding My Path
                 </span>
                 <div className="space-y-4">
-                  <p>While everyone else was polishing resumes, I was studying leverage. <span className="font-bold text-black italic">The Almanack of Naval Ravikant</span> changed the geometry of my brain. I had zero money, which meant I had zero room for delusion. It had to work.</p>
-                  <p>I found my tribe online. Outliers, builders, and misfits like David Senra, Suhail, and Marc Lou. They proved that a single person with a laptop could build an empire and live completely on their own terms.</p>
+                  <p>While my classmates were polishing their resumes, I was trying to learn how to build real products. It was a lonely time until I found some amazing communities online.</p>
+                  <p>I saw regular people with just a laptop bringing incredible ideas to life. They showed me that you don&apos;t need a massive company or anyone&apos;s permission to create something meaningful.</p>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-[150px_1fr] gap-6">
                 <span className="text-xs font-bold uppercase tracking-widest text-neutral-400 mt-2">
-                  Present<br/>The Blueprint
+                  Present<br/>Just Build
                 </span>
                 <div className="space-y-4">
-                  <p>Nassim Taleb and David Deutsch rewired my operating system. Survival requires iteration. You don&apos;t guess what the market wants; you bleed, you ship, and you let reality do the filtering.</p>
-                  <p>Every product is a mutation. Every failure is natural selection. If you iterate fast enough, survival is a mathematical certainty. To the average person, this looks like chaos. To me, it&apos;s the only way to build something that lasts.</p>
+                  <p>Now, my philosophy is simple: I make things, share them with the world, and listen to what happens next. Not everything works, and that&apos;s perfectly fine.</p>
+                  <p>Every mistake teaches me something new. It might seem a bit unstructured to some, but to me, it&apos;s the most honest way to live and work.</p>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-[150px_1fr] gap-6 pt-10 border-t border-black/5">
                 <span className="text-xs font-bold uppercase tracking-widest text-neutral-400 mt-2">
-                  The End Game
+                  What Matters
                 </span>
                 <div className="space-y-4">
-                  <p>Money is just oxygen. I don&apos;t optimize for cash; I optimize for leverage and time.</p>
-                  <p>Listening to David Senra dissect the lives of history&apos;s greatest founders is my baseline. It proves that obsession isn&apos;t a bug; it&apos;s the defining feature of anyone who ever dented the universe.</p>
-                  <blockquote className="pl-5 border-l-2 border-black/20 italic text-neutral-600 my-6">
-                    &quot;History is built by the obsessed. The people who cannot fit into existing systems are the exact ones who build the new ones.&quot;
-                  </blockquote>
+                  <p>Money is important, but for me, it&apos;s really just a way to earn the freedom to spend my time how I choose. When things get complicated, I try to remember a few simple things:</p>
+                  <ul className="list-disc pl-5 space-y-2 text-neutral-600">
+                    <li>It&apos;s a good thing to care deeply about what you make.</li>
+                    <li>If you don&apos;t fit into the normal path, you can always build your own.</li>
+                    <li>Keep trying, keep learning, and don&apos;t give up.</li>
+                  </ul>
                   <p className="text-xl font-bold tracking-tight text-black mt-8">
-                    We are playing a game of survival. And I intend to win.
+                    At the end of the day, I just want to spend my life building things I love.
                   </p>
                 </div>
               </div>
