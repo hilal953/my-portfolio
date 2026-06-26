@@ -39,7 +39,13 @@ export default function Home() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-6 md:px-12 backdrop-blur-md bg-[#f5f2eb]/80 border-b border-black/5"
       >
-        <span className="font-bold tracking-tight text-lg">H.S.</span>
+        <div className="flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-8 h-8 rounded-lg shadow-sm">
+            <rect width="32" height="32" rx="8" fill="#0a0a0a" stroke="#ffffff" strokeWidth="1" strokeOpacity="0.2"/>
+            <text x="16" y="22" textAnchor="middle" fontFamily="system-ui, sans-serif" fontSize="16" fontWeight="800" fill="#ffffff" letterSpacing="-1">HS</text>
+          </svg>
+          <span className="font-bold tracking-tight text-lg">H.S.</span>
+        </div>
         <div className="flex items-center gap-6 text-sm font-semibold">
           <a href="https://x.com/HilalSafwan_30" target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-black transition-colors">Twitter</a>
           <a href="https://github.com/hilal953" target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-black transition-colors">GitHub</a>
@@ -82,7 +88,7 @@ export default function Home() {
             
             <div className="flex flex-col gap-12">
               {/* Leverage */}
-              <a href="https://leverage-one.vercel.app" target="_blank" rel="noopener noreferrer" className="group block">
+              <a href="https://leverage-one.vercel.app" target="_blank" rel="noopener noreferrer" className="group block p-6 border border-black/5 rounded-2xl bg-white/40 hover:bg-white/60 hover:border-black/10 transition-all shadow-sm">
                 <div className="flex items-baseline justify-between mb-2">
                   <h3 className="text-2xl font-bold flex items-center gap-2 group-hover:text-neutral-600 transition-colors">
                     Leverage <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -95,12 +101,12 @@ export default function Home() {
               </a>
 
               {/* Aura Reads */}
-              <a href="https://aurareads.xyz" target="_blank" rel="noopener noreferrer" className="group block">
+              <a href="https://aurareads.xyz" target="_blank" rel="noopener noreferrer" className="group block p-6 border border-black/5 rounded-2xl bg-white/40 hover:bg-white/60 hover:border-black/10 transition-all shadow-sm">
                 <div className="flex items-baseline justify-between mb-2">
                   <h3 className="text-2xl font-bold flex items-center gap-2 group-hover:text-neutral-600 transition-colors">
                     Aura Reads <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </h3>
-                  <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Product</span>
+                  <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider bg-black/5 px-2 py-1 rounded-full">Product</span>
                 </div>
                 <p className="text-neutral-600 text-lg leading-relaxed">
                   High-signal summaries of the best books for founders and builders.
@@ -134,32 +140,35 @@ export default function Home() {
           <FadeIn delay={0.2}>
             <h2 className="text-sm font-bold uppercase tracking-widest text-neutral-400 mb-8 pb-4 border-b border-black/5">Skills</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-              <div>
-                <p className="font-bold mb-3">Execution</p>
-                <ul className="text-neutral-600 space-y-2 text-sm font-medium">
-                  <li>Rapid Prototyping</li>
-                  <li>Systems Design</li>
-                  <li>Go-To-Market</li>
-                  <li>AI Automation</li>
-                </ul>
+              <div className="p-6 border border-black/5 rounded-3xl bg-white/30 hover:bg-white/50 transition-all shadow-sm">
+                <p className="font-bold mb-4 text-neutral-800">Execution</p>
+                <div className="flex flex-wrap gap-2">
+                  {["Rapid Prototyping", "Systems Design", "Go-To-Market", "AI Automation"].map((skill) => (
+                    <span key={skill} className="px-3 py-1.5 text-sm font-medium border border-black/10 rounded-full text-neutral-600 bg-white/50 shadow-sm">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div>
-                <p className="font-bold mb-3">Leverage</p>
-                <ul className="text-neutral-600 space-y-2 text-sm font-medium">
-                  <li>Full-Stack Arch</li>
-                  <li>Next.js / React</li>
-                  <li>PostgreSQL</li>
-                  <li>Tailwind CSS</li>
-                </ul>
+              <div className="p-6 border border-black/5 rounded-3xl bg-white/30 hover:bg-white/50 transition-all shadow-sm">
+                <p className="font-bold mb-4 text-neutral-800">Leverage</p>
+                <div className="flex flex-wrap gap-2">
+                  {["Full-Stack Arch", "Next.js / React", "PostgreSQL", "Tailwind CSS"].map((skill) => (
+                    <span key={skill} className="px-3 py-1.5 text-sm font-medium border border-black/10 rounded-full text-neutral-600 bg-white/50 shadow-sm">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div>
-                <p className="font-bold mb-3">Obsessions</p>
-                <ul className="text-neutral-600 space-y-2 text-sm font-medium">
-                  <li>Digital Products</li>
-                  <li>SaaS</li>
-                  <li>Asymmetric Bets</li>
-                  <li>AI Agents</li>
-                </ul>
+              <div className="p-6 border border-black/5 rounded-3xl bg-white/30 hover:bg-white/50 transition-all shadow-sm">
+                <p className="font-bold mb-4 text-neutral-800">Obsessions</p>
+                <div className="flex flex-wrap gap-2">
+                  {["Digital Products", "SaaS", "Asymmetric Bets", "AI Agents"].map((skill) => (
+                    <span key={skill} className="px-3 py-1.5 text-sm font-medium border border-black/10 rounded-full text-neutral-600 bg-white/50 shadow-sm">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </FadeIn>
